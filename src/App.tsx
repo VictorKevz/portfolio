@@ -1,6 +1,7 @@
 import "./App.css";
-import Example from "./components/Example";
-import ToggleButton from "./components/ToggleButton";
+import { ContentContainer } from "./components/content/ContentContainer";
+import Profile from "./components/Profile";
+import ThemeButton from "./components/ThemeButton";
 import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
@@ -10,8 +11,12 @@ function App() {
         className="w-full min-h-screen bg-cover bg-no-repeat flex flex-col items-center justify-center gap-4 relative"
         style={{ background: "var(--gradient)" }}
       >
-        <Example />
-        <ToggleButton />
+        <div className="w-full flex items-start justify-center gap-16">
+          <Profile />
+          <ContentContainer />
+        </div>
+
+        <ThemeButton />
       </main>
     </ThemeProvider>
   );
