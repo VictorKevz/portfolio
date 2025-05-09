@@ -6,7 +6,10 @@ import { ThemeProvider } from "./context/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
-      <main className="w-full min-h-screen bg-[var(--bg)] flex flex-col items-center justify-center gap-4 relative">
+      <main
+        className="w-full min-h-screen bg-cover bg-no-repeat flex flex-col items-center justify-center gap-4 relative"
+        style={{ background: "var(--gradient)" }}
+      >
         <Example />
         <ToggleButton />
       </main>
