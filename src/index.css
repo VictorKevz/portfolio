@@ -3,8 +3,8 @@
 :root {
   --neutral-0: #fff;
   --neutral-200: #dededc;
-  --neutral-300: #e8e8e4;
-  --neutral-400: #606162;
+  --neutral-300: #f0f4f5;
+  --neutral-400: #606162; /* for small text */
   --neutral-800: #333334;
 
   --neutral-900: #1e1e1f;
@@ -15,6 +15,7 @@
   /* --primary-color: #f7b82f; */
   --primary-color: #2b6bda;
   /*  --primary-color: #940ae9; */
+  --secondary-color: #185acb;
 
   --gradient: linear-gradient(to right, #fff, #ebf3fc);
 }

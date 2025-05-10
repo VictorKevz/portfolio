@@ -10,10 +10,10 @@ import profilePic from "../assets/images/profile.png";
 
 const Profile = () => {
   return (
-    <aside className="lg:max-w-72 w-full lg:min-h-[40rem] bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-xl">
-      <header className="w-full flex sm:flex-col items-start gap-4">
+    <aside className="lg:max-w-72 w-full lg:min-h-[40rem] bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg">
+      <header className="w-full flex items-center gap-4">
         <div
-          className="min-h-20 w-20 sm:w-40 z-1 sm:min-h-40 bg-cover px-1.5 rounded-2xl bg-[var(--neutral-200)] flex items-center justify-center shadow-lg"
+          className="min-h-20 w-20 sm:w-40 z-1 sm:min-h-40 bg-cover px-1.5 rounded-2xl bg-[var(--neutral-300)] flex items-center justify-center shadow-lg"
           style={{ backgroundImage: `url(${profilePic})` }}
         ></div>
         <div className="flex flex-col items-start gap-2">
@@ -25,10 +25,10 @@ const Profile = () => {
           </span>
         </div>
       </header>
-      <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 py-8 border-t border-[var(--border)]">
+      <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5 py-8 border-t border-[var(--border)]">
         {contactData.map((item) => (
-          <li key={item.id} className="flex items-center gap-1.5 w-full">
-            <span className="flex items-center justify-center h-12 w-12 bg-[var(--neutral-300)] border border-[var(--border)] rounded-xl text-[var(--primary-color)]">
+          <li key={item.id} className="flex items-center gap-4 w-full">
+            <span className="flex items-center justify-center h-12 w-12 bg-[var(--neutral-300)] border border-[var(--border)] rounded-xl text-[var(--primary-color)] shadow-lg">
               <item.icon />
             </span>
             <p className="flex flex-col text-[var(--neutral-900)] font-normal text-sm">
@@ -76,7 +76,7 @@ const contactData = [
   },
   {
     id: 3,
-    label: "Github",
+    label: "Languages",
     value: "English, Mandarin, Finnish, Shona",
     icon: Language,
   },
