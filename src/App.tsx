@@ -11,7 +11,7 @@ function App() {
         className="w-full min-h-screen bg-cover bg-no-repeat flex flex-col items-center justify-center gap-4 relative"
         style={{ background: "var(--gradient)" }}
       >
-        <div className="w-full flex items-start justify-center gap-16">
+        <div className="w-full flex flex-col items-center lg:flex-row lg:items-start justify-center gap-16 px-6 mt-24 lg:mt-20 pb-12">
           <Profile />
           <ContentContainer />
         </div>
