@@ -13,11 +13,11 @@
 
   /* To be decided */
   /* --primary-color: #f7b82f; */
-  --primary-color: #2b6bda;
+  --primary-color: #2f4ebd;
   /*  --primary-color: #940ae9; */
-  --secondary-color: #185acb;
+  --secondary-color: #6193ea;
 
-  --gradient: linear-gradient(to right, #fff, #ebf3fc);
+  --gradient: linear-gradient(to top, #fff, #ebf3fc);
 }
 
 .dark {
@@ -27,6 +27,7 @@
   --neutral-400: #8c8e90;
 
   --neutral-900: #fcf8f8;
+  --primary-color: #2b6bda;
 
   --border: #343434;
   /* --primary-color: #fdcd67; */
