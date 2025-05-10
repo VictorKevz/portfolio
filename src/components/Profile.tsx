@@ -10,7 +10,7 @@ import profilePic from "../assets/images/profile.png";
 
 const Profile = () => {
   return (
-    <aside className="xl:max-w-72 w-full xl:min-h-[40rem] bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg transition-all duration-300 ease-in-out">
+    <aside className="xl:max-w-72 w-full bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg transition-all duration-300 ease-in-out">
       <header className="w-full flex items-center gap-4 xl:flex-col">
         <div
           className="min-h-20 w-20 sm:w-40 sm:min-h-40 lg:w-35 xl:min-h-35 bg-cover px-1.5 rounded-2xl bg-[var(--neutral-300)] flex items-center justify-center shadow-lg"
@@ -32,7 +32,7 @@ const Profile = () => {
               <item.icon />
             </span>
             <p className="flex flex-col text-[var(--neutral-900)] font-normal text-sm">
-              <span className="uppercase text-xs text-[var(--neutral-400)]">
+              <span className="uppercase text-xs text-[var(--neutral-400)] font-bold">
                 {item.label}
               </span>
               {item.value}

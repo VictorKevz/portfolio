@@ -25,8 +25,8 @@
   --neutral-200: #333334;
   --neutral-300: #2b2b2c;
   --neutral-400: #8c8e90;
-
-  --neutral-900: #fcf8f8c9;
+  --neutral-800: #d6d6da;
+  --neutral-900: #fcf8f8ea;
   --primary-color: #2b6bda;
 
   --border: #343434;
@@ -43,10 +43,12 @@
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   letter-spacing: 0.03rem;
   line-height: 1.25;
   font-weight: 900;
+  color: var(--neutral-900);
 }
 button,
 a {
@@ -63,6 +65,7 @@ a {
 }
 p {
   line-height: 1.5;
+  color: var(--neutral-800);
 }
 li {
   list-style: none;
