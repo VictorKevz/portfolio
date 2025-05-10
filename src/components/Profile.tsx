@@ -77,7 +77,7 @@ const contactData = [
   {
     id: 3,
     label: "Languages",
-    value: "English, Mandarin, Finnish, Shona",
+    value: "English | Mandarin | Finnish",
     icon: Language,
   },
   {
