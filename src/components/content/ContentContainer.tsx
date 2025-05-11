@@ -1,7 +1,7 @@
 import { NavTabs } from "../NavTabs";
 import { tabKey } from "../../types/tabs";
 import { useNavTabsContext } from "../../context/NavTabsContext";
-import { About } from "./tabs/About";
+import { About } from "./tabs/about/About";
 export const ContentContainer = () => {
   const { activeTab } = useNavTabsContext();
 
@@ -13,9 +13,9 @@ export const ContentContainer = () => {
   };
 
   return (
-    <section className="max-w-5xl w-full bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl shadow-xl lg:min-h-[44rem]">
+    <section className="max-w-screen-xl w-full bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl shadow-xl lg:min-h-[44rem]">
       <header className="flex w-full justify-between items-start pl-4">
-        <h2 className="text-3xl text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-8">
+        <h2 className="text-4xl text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-8">
           {tabTitle[activeTab]}
           <span className="w-12 h-1.5 bg-[var(--secondary-color)] rounded-full"></span>
         </h2>
