@@ -14,7 +14,7 @@ function App() {
         style={{ background: "var(--gradient)" }}
       >
         <NavTabsProvider>
-          <div className="w-full flex flex-col items-center xl:flex-row xl:items-start justify-center gap-16 px-6 mt-24 pb-32 xl:mt-20 lg:pb-12">
+          <div className="w-full flex flex-col items-center xl:flex-row xl:items-start justify-center gap-16 px-5 mt-24 pb-32 xl:mt-20 lg:pb-12">
             <Profile />
             <ContentContainer />
           </div>

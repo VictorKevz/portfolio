@@ -35,6 +35,15 @@
   /* --primary-color: #af3cf6; */
   --gradient: linear-gradient(to right, #161616, #1c1f24fe);
 }
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 *,
 ::after,
 ::before {
