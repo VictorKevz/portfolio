@@ -5,7 +5,7 @@ import wordpress from "../../../assets/images/wordpress.svg";
 
 export const About = () => {
   return (
-    <section className="w-full px-4">
+    <div className="w-full px-4">
       <header className="w-full flex flex-col items-start gap-3">
         <p>
           Hi, I’m a{" "}
@@ -35,9 +35,9 @@ export const About = () => {
           {servicesData.map((card) => (
             <div
               key={card.id}
-              className="w-full flex items-start gap-3 bg-[var(--neutral-300)] rounded-2xl px-4 py-5"
+              className="w-full flex items-start gap-3 bg-[var(--neutral-300)] rounded-2xl px-4 py-5 border-t border-[var(--border)] shadow-lg"
             >
-              <figure className="rounded-xl bg-[var(--neutral-0)] w-20 p-2 flex items-center justify-center">
+              <figure className="rounded-xl bg-[var(--neutral-0)] w-20 p-2 flex items-center justify-center shadow-sm shadow-blue-400/20">
                 <img src={card.icon} alt="" className="" />
               </figure>
               <div className="flex flex-col items-start gap-2">
@@ -48,7 +48,7 @@ export const About = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
