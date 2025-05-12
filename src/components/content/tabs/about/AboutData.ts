@@ -1,7 +1,7 @@
 import webDev from "../../../../assets/images/webDev.png";
 import content from "../../../../assets/images/content.png";
 import support from "../../../../assets/images/support.png";
-import wordpress from "../../../../assets/images/wordpress.svg";
+import wordpress from "../../../../assets/images/wordpress.png";
 import {
   FitnessCenter,
   LibraryMusicOutlined,
@@ -50,14 +50,13 @@ export const hobbiesData = [
   {
     id: "fitness",
     title: "Fitness",
-    description: "Weightlifting and clean eating fuel my focus.",
+    description: "Weightlifting sharpens my mental clarity.",
     icon: FitnessCenter,
   },
   {
     id: "reading",
     title: "Podcasts",
-    description:
-      "Love listening to podcasts on human behavior and a bit of biology.",
+    description: "Enjoy podcasts on human behavior and biology.",
     icon: Podcasts,
   },
   {

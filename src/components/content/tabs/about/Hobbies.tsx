@@ -12,7 +12,7 @@ export const Hobbies = () => {
         {hobbiesData.map((hobby) => (
           <div
             key={hobby.id}
-            className="w-full flex flex-col gap-2 px-4 py-5 border border-[var(--border)] rounded-xl"
+            className="w-full flex flex-col gap-2 p-4 border border-[var(--border)] rounded-xl"
           >
             <span className="flex items-center justify-center h-10 w-10 text-[var(--neutral-400)] rounded-full bg-[var(--neutral-300)]">
               <hobby.icon />

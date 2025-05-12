@@ -12,10 +12,12 @@
   --border: #e4f1ff;
 
   /* To be decided */
-  /* --primary-color: #f7b82f; */
+  --primary-color: #f7b82f;
   --primary-color: #2f4ebd;
-  /*  --primary-color: #940ae9; */
+  /* --primary-color: #940ae9; */
   --secondary-color: #6193ea;
+  /* --secondary-color: #940ae9; */
+  /* --primary-color: #f7b82f; */
 
   --gradient: linear-gradient(to top, #fff, #ebf3fc);
 }
@@ -28,6 +30,7 @@
   --neutral-800: #d6d6dae4;
   --neutral-900: #fcf8f8ea;
   --primary-color: #2b6bda;
+  /* --primary-color: #f7b82f; */
 
   --border: #343434;
   /* --primary-color: #fdcd67; */
@@ -42,6 +45,22 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  .animate-bounce-down {
+    animation: bounce-down 1.5s infinite;
+    transition: all 0.3s ease-in-out;
+  }
+  @keyframes bounce-down {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.35rem);
+    }
+    100% {
+      transform: translateY(0.35rem);
+    }
   }
 }
 *,
