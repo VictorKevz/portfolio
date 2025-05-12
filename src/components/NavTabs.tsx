@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useNavTabsContext } from "../context/NavTabsContext";
+import { navTabsDataType } from "../types/tabs";
 
 export const NavTabs = () => {
-  const [activeTab, setActiveTab] = useState<string>("about");
+  const { activeTab, onUpdate } = useNavTabsContext();
+
   return (
     <ul className="w-full flex items-center justify-between h-14">
       {navTabsData.map((tab, index) => {
@@ -20,7 +22,7 @@ export const NavTabs = () => {
             <button
               type="button"
               className={`${!isLast && "sm:mr-15"}`}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => onUpdate(tab.id)}
             >
               {tab.text}
             </button>
@@ -35,7 +37,7 @@ export const NavTabs = () => {
   );
 };
 
-const navTabsData = [
+const navTabsData: navTabsDataType[] = [
   { id: "about", text: "About" },
   { id: "projects", text: "Projects" },
   { id: "career", text: "Career" },
