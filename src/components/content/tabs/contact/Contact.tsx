@@ -6,16 +6,13 @@ import {
   FormFieldsDataType,
   FormFieldsValid,
   InputEvent,
+  EmptyFormFields,
 } from "../../../../types/contact";
 import { InputField } from "./InputField";
 import { Send } from "@mui/icons-material";
 
 export const Contact = () => {
-  const [form, setForm] = useState<FormFields>({
-    fullName: "",
-    email: "",
-    message: "",
-  });
+  const [form, setForm] = useState<FormFields>(EmptyFormFields);
   const [formValid, setFormValid] = useState<FormFieldsValid>({
     fullName: true,
     email: true,
@@ -38,6 +35,24 @@ export const Contact = () => {
 
   const handleSubmit = (e: FormSubmitEvent) => {
     e.preventDefault();
+    const valid = handleValidation();
+    if (!valid) return;
+    alert("Successfull");
+    setForm(EmptyFormFields);
+  };
+
+  const handleValidation = () => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const newFormValid = { ...formValid };
+
+    newFormValid.fullName = !!form.fullName.trim();
+    newFormValid.message = !!form.message.trim() && form.message.length > 3;
+    newFormValid.email = !!form.email.trim() && regex.test(form.email);
+    setFormValid(newFormValid);
+
+    const isValid = Object.values(newFormValid).every(Boolean);
+
+    return isValid;
   };
   const formFieldsData: FormFieldsDataType[] = [
     {

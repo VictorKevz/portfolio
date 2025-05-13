@@ -3,10 +3,10 @@ export type FormFields = {
   email: string;
   message: string;
 };
-export type EmptyFormFields = {
-  fullName: "";
-  email: "";
-  message: "";
+export const EmptyFormFields: FormFields = {
+  fullName: "",
+  email: "",
+  message: "",
 };
 
 export type FormFieldsValid = {
