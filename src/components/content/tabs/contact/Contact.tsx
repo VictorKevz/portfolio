@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import contactImg from "../../../../assets/images/contact-bg.svg";
+import contactImg from "../../../../assets/images/contact.svg";
 import {
   FormSubmitEvent,
   FormFields,
@@ -101,7 +101,7 @@ export const Contact = () => {
     },
   ];
   return (
-    <div className="w-full mt-8 px-6">
+    <div className="w-full mt-6 px-6">
       <header className="w-full flex flex-col items-start">
         <h3 className="text-2xl">Let's bring your project to life</h3>
         <p className="text-sm sm:text-lg xl:w-[90%]">
@@ -110,12 +110,12 @@ export const Contact = () => {
         </p>
       </header>
       <div className="w-full flex flex-col md:flex-row-reverse items-center justify-between gap-6">
-        <figure className="w-[80%]">
+        <figure className="w-[70%] lg:w-[50%]">
           <img src={contactImg} alt="" className="w-full h-auto" />
         </figure>
         <form
           onSubmit={(e: FormSubmitEvent) => handleSubmit(e)}
-          className="w-full flex flex-col items-start gap-4 relative"
+          className="w-full flex flex-col items-start gap-3 relative"
         >
           {formFieldsData.map((field) => {
             return (

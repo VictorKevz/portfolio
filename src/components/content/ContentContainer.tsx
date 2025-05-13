@@ -29,7 +29,7 @@ export const ContentContainer = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-8 shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
+      className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
     >
       <header className="flex w-full justify-between items-start pl-4">
         <h2 className="text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-8">
@@ -44,21 +44,23 @@ export const ContentContainer = () => {
       </header>
       <div className="w-full ">{activeTab === "about" && <About />}</div>
       <div className="w-full">{activeTab === "contact" && <Contact />}</div>
-      <div className="hidden xl:flex">
-        <button
-          type="button"
-          onClick={handleScroll}
-          className="fixed right-5 bottom-[13%] w-13 h-13 rounded-full text-[var(--primary-color)] bg-[var(--neutral-300)] backdrop-blur-2xl border border-[var(--border)] shadow-xl shadow-blue-400/20 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/60"
-        >
-          <span className="animate-bounce-down">
-            {isAtBottom ? (
-              <ArrowUpward fontSize="medium" className="scale-110" />
-            ) : (
-              <ArrowDownward fontSize="medium" className="scale-110" />
-            )}
-          </span>
-        </button>
-      </div>
+      {activeTab != "contact" && (
+        <div className="hidden xl:flex">
+          <button
+            type="button"
+            onClick={handleScroll}
+            className="fixed right-5 bottom-[13%] w-13 h-13 rounded-full text-[var(--primary-color)] bg-[var(--neutral-300)] backdrop-blur-2xl border border-[var(--border)] shadow-xl shadow-blue-400/20 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/60"
+          >
+            <span className="animate-bounce-down">
+              {isAtBottom ? (
+                <ArrowUpward fontSize="medium" className="scale-110" />
+              ) : (
+                <ArrowDownward fontSize="medium" className="scale-110" />
+              )}
+            </span>
+          </button>
+        </div>
+      )}
     </section>
   );
 };
