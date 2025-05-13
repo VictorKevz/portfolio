@@ -1,28 +1,59 @@
-import { InputFieldProps } from "../../../../types/contact";
+import { InputEvent, InputFieldProps } from "../../../../types/contact";
 
-export const InputField = ({ field }: InputFieldProps) => {
+export const InputField = ({ field, onChange }: InputFieldProps) => {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col mt-6">
       {field.type === "text" ? (
         <label htmlFor={field.id} className="w-full flex flex-col items-start">
           <input
             id={field.id}
             name={field.name}
             value={field.value}
+            onChange={(event: InputEvent) => onChange(event)}
             type={field.type}
-            className="h-12 border border-[var(--border)] w-full my-5 rounded-xl"
+            placeholder={field.placeholder}
+            className={`h-12 border text-[var(--neutral-900)] placeholder:text-[var(--neutral-400)] ${
+              !field.isValid
+                ? "border-[var(--red-100)]"
+                : "border-[var(--border)]"
+            } w-full rounded-xl pl-4 caret-[var(--primary-color)] ${
+              field.isValid
+                ? "hover:border-[var(--primary-color)]"
+                : "hover:border-[var(--red-100)]"
+            }`}
           />
+          {!field.isValid && (
+            <span className="text-sm mt-1 text-[var(--red-100)]">
+              {field.errorMessage}
+            </span>
+          )}
         </label>
       ) : (
-        <textarea
-          className="border border-[var(--border)] w-full flex flex-col items-start mt-5 rounded-xl"
-          id={field.id}
-          name={field.name}
-          value={field.value}
-          rows={8}
-        >
-          <input className="" />
-        </textarea>
+        <div className="w-full flex flex-col items-start">
+          <textarea
+            className={`border text-[var(--neutral-900)] placeholder:text-[var(--neutral-400)] ${
+              !field.isValid
+                ? "border-[var(--red-100)]"
+                : "border-[var(--border)]"
+            } ${
+              field.isValid
+                ? "hover:border-[var(--primary-color)]"
+                : "hover:border-[var(--red-100)]"
+            }
+            w-full  rounded-xl p-4`}
+            id={field.id}
+            name={field.name}
+            value={field.value}
+            onChange={(event: InputEvent) => onChange(event)}
+            placeholder={field.placeholder}
+            rows={6}
+          ></textarea>
+          {!field.isValid && (
+            <span className="text-xs sm:text-sm mt-1 text-[var(--red-100)]">
+              {field.errorMessage}
+            </span>
+          )}
+        </div>
       )}
     </div>
   );
