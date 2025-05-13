@@ -115,7 +115,7 @@ export const Contact = () => {
         </figure>
         <form
           onSubmit={(e: FormSubmitEvent) => handleSubmit(e)}
-          className="w-full flex flex-col items-start gap-3 relative"
+          className="w-full md:w-[90%] flex flex-col items-start gap-3 relative"
         >
           {formFieldsData.map((field) => {
             return (
