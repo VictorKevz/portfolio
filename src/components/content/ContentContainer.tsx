@@ -4,6 +4,7 @@ import { useNavTabsContext } from "../../context/NavTabsContext";
 import { About } from "./tabs/about/About";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { useRef, useState } from "react";
+import { Contact } from "./tabs/contact/Contact";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -28,7 +29,7 @@ export const ContentContainer = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
+      className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-8 shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
     >
       <header className="flex w-full justify-between items-start pl-4">
         <h2 className="text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-8">
@@ -41,7 +42,8 @@ export const ContentContainer = () => {
           </nav>
         </div>
       </header>
-      <div className="w-full py-8">{activeTab === "about" && <About />}</div>
+      <div className="w-full ">{activeTab === "about" && <About />}</div>
+      <div className="w-full">{activeTab === "contact" && <Contact />}</div>
       <div className="hidden xl:flex">
         <button
           type="button"
