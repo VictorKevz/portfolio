@@ -3,7 +3,7 @@ import { Hobbies } from "./Hobbies";
 
 export const About = () => {
   return (
-    <div className="w-full px-6">
+    <div className="w-full px-6 mt-8">
       <header className="w-full flex flex-col items-start gap-3">
         <p className="text-sm sm:text-base">
           Hi, I’m a{" "}
