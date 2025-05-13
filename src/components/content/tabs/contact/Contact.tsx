@@ -10,15 +10,19 @@ import {
 } from "../../../../types/contact";
 import { InputField } from "./InputField";
 import { Send } from "@mui/icons-material";
+import { useAlertContext } from "../../../../context/AlertContext";
 
 export const Contact = () => {
+  //States....................................................
   const [form, setForm] = useState<FormFields>(EmptyFormFields);
   const [formValid, setFormValid] = useState<FormFieldsValid>({
     fullName: true,
     email: true,
     message: true,
   });
+  const { handleAlert } = useAlertContext();
 
+  //Handlers....................................................
   const handleChange = useCallback((event: InputEvent) => {
     const { name, value } = event.target;
     setForm((prev) => ({
@@ -36,8 +40,19 @@ export const Contact = () => {
   const handleSubmit = (e: FormSubmitEvent) => {
     e.preventDefault();
     const valid = handleValidation();
-    if (!valid) return;
-    alert("Successfull");
+    if (!valid) {
+      handleAlert({
+        severity: "error",
+        message: "Failed to send",
+        show: true,
+      });
+      return;
+    }
+    handleAlert({
+      severity: "success",
+      message: "Message successfully sent!",
+      show: true,
+    });
     setForm(EmptyFormFields);
   };
 
@@ -54,6 +69,8 @@ export const Contact = () => {
 
     return isValid;
   };
+
+  //Data....................................................
   const formFieldsData: FormFieldsDataType[] = [
     {
       id: "fullName",
@@ -98,7 +115,7 @@ export const Contact = () => {
         </figure>
         <form
           onSubmit={(e: FormSubmitEvent) => handleSubmit(e)}
-          className="w-full flex flex-col items-start gap-4"
+          className="w-full flex flex-col items-start gap-4 relative"
         >
           {formFieldsData.map((field) => {
             return (

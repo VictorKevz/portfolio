@@ -32,3 +32,17 @@ export type InputFieldProps = {
   field: FormFieldsDataType;
   onChange: (event: InputEvent) => void;
 };
+
+export type SeverityType = "success" | "warning" | "error" | "info";
+
+export interface AlertState {
+  severity: SeverityType;
+  message: string;
+  show: boolean;
+}
+
+export const DefaultAlertState: AlertState = {
+  severity: "success",
+  message: "",
+  show: false,
+};

@@ -14,7 +14,7 @@ export const InputField = ({ field, onChange }: InputFieldProps) => {
             placeholder={field.placeholder}
             className={`h-12 border text-[var(--neutral-900)] placeholder:text-[var(--neutral-400)] ${
               !field.isValid
-                ? "border-[var(--red-100)]"
+                ? "border-[var(--red-100)] bg-red-400/5"
                 : "border-[var(--border)]"
             } w-full rounded-xl pl-4 caret-[var(--primary-color)] ${
               field.isValid
@@ -33,7 +33,7 @@ export const InputField = ({ field, onChange }: InputFieldProps) => {
           <textarea
             className={`border text-[var(--neutral-900)] placeholder:text-[var(--neutral-400)] ${
               !field.isValid
-                ? "border-[var(--red-100)]"
+                ? "border-[var(--red-100)] bg-red-400/5"
                 : "border-[var(--border)]"
             } ${
               field.isValid
