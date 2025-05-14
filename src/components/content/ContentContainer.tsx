@@ -5,6 +5,7 @@ import { About } from "./tabs/about/About";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { useRef, useState } from "react";
 import { Contact } from "./tabs/contact/Contact";
+import { Career } from "./tabs/Career";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -31,8 +32,8 @@ export const ContentContainer = () => {
       ref={sectionRef}
       className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
     >
-      <header className="flex w-full justify-between items-start pl-4">
-        <h2 className="text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-8">
+      <header className="flex w-full justify-between items-start pl-6">
+        <h2 className="text-3xl sm:text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-9">
           {tabTitle[activeTab]}
           <span className="w-12 h-1.5 bg-[var(--secondary-color)] rounded-full"></span>
         </h2>
@@ -44,6 +45,7 @@ export const ContentContainer = () => {
       </header>
       <div className="w-full ">{activeTab === "about" && <About />}</div>
       <div className="w-full">{activeTab === "contact" && <Contact />}</div>
+      {activeTab === "career" && <Career />}
       {activeTab != "contact" && (
         <div className="hidden xl:flex">
           <button
