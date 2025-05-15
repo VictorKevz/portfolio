@@ -5,28 +5,35 @@ import { About } from "./tabs/about/About";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { useRef, useState } from "react";
 import { Contact } from "./tabs/contact/Contact";
-import { Career } from "./tabs/Career";
+import { Career } from "./tabs/career/Career";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
   const { activeTab } = useNavTabsContext();
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   const tabTitle: Record<tabKey, string> = {
     about: "About Me",
     projects: "My Projects",
-    career: "Career Journey",
+    career: "My Career",
     contact: "Get in Touch",
   };
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollTop = isAtBottom
-        ? 0
-        : sectionRef.current.scrollHeight;
+    const section = sectionRef.current;
+    const body = document.documentElement;
+
+    if (section) {
+      const targetScroll = isAtBottom ? 0 : section.scrollHeight;
+
+      section.scrollTo({ top: targetScroll, behavior: "smooth" });
+
+      body.scrollTo({ top: targetScroll, behavior: "smooth" });
+
       setIsAtBottom(!isAtBottom);
     }
   };
+
   return (
     <section
       ref={sectionRef}
@@ -51,7 +58,7 @@ export const ContentContainer = () => {
           <button
             type="button"
             onClick={handleScroll}
-            className="fixed right-5 bottom-[13%] w-13 h-13 rounded-full text-[var(--primary-color)] bg-[var(--neutral-300)] backdrop-blur-2xl border border-[var(--border)] shadow-xl shadow-blue-400/20 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/60"
+            className="fixed right-5 bottom-[13%] w-13 h-13 rounded-full text-[var(--primary-color)] bg-transparent backdrop-blur-2xl shadow-xl shadow-blue-400/20 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/60"
           >
             <span className="animate-bounce-down">
               {isAtBottom ? (
