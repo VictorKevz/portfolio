@@ -54,21 +54,19 @@ export const ContentContainer = () => {
       <div className="w-full">{activeTab === "contact" && <Contact />}</div>
       {activeTab === "career" && <Career />}
       {activeTab != "contact" && (
-        <div className="hidden xl:flex">
-          <button
-            type="button"
-            onClick={handleScroll}
-            className="fixed right-5 bottom-[13%] w-13 h-13 rounded-full text-[var(--primary-color)] bg-transparent backdrop-blur-2xl shadow-xl shadow-blue-400/20 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/60"
-          >
-            <span className="animate-bounce-down">
-              {isAtBottom ? (
-                <ArrowUpward fontSize="medium" className="scale-110" />
-              ) : (
-                <ArrowDownward fontSize="medium" className="scale-110" />
-              )}
-            </span>
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={handleScroll}
+          className="fixed right-5 bottom-[13%] w-13 h-13 rounded-xl text-[var(--primary-color)] bg-[var(--neutral-200)] shadow-xl shadow-blue-400/10 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/30"
+        >
+          <span className="animate-bounce-down">
+            {isAtBottom ? (
+              <ArrowUpward fontSize="medium" className="scale-110" />
+            ) : (
+              <ArrowDownward fontSize="medium" className="scale-110" />
+            )}
+          </span>
+        </button>
       )}
     </section>
   );

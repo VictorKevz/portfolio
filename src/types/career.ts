@@ -2,7 +2,7 @@ import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material/SvgIcon";
 type MuiIconType = OverridableComponent<SvgIconTypeMap<object, "svg">>;
 
-export type careerTab = "education" | "experience";
+export type careerTab = "education" | "experience" | "certifications";
 
 export type careerButtonsDataType = {
   id: careerTab;
@@ -15,10 +15,12 @@ export interface careerItem {
   title: string;
   year: string;
   description: string;
+  image?: string;
 }
 export type CareerData = {
   education: careerItem[];
   experience: careerItem[];
+  certifications: careerItem[];
 };
 
 export type careerItemProps = {

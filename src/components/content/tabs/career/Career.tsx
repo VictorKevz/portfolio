@@ -3,6 +3,7 @@ import { useState } from "react";
 import { careerTab } from "../../../../types/career";
 import { careerButtonsData, data } from "./careerData";
 import { CareerItem } from "./CareerItem";
+import { Certifications } from "./Certifications";
 
 export const Career = () => {
   const [activeTab, setActiveTab] = useState<careerTab>("experience");
@@ -18,20 +19,27 @@ export const Career = () => {
             <button
               type="button"
               key={tab.id}
-              className={`relative h-11 min-w-max max-w-50 w-full px-2 sm:px-4 rounded-t-xl bg-[var(--neutral-300)] font-medium text-base ${
+              className={`relative h-9 sm:h-11 min-w-max max-w-50 w-full gap-1 px-2 sm:px-4 rounded-t-xl bg-[var(--neutral-300)] font-medium text-base ${
                 isActive
                   ? "text-white bg-[var(--primary-color)]"
                   : "text-[var(--neutral-900)]"
               }`}
               onClick={() => setActiveTab(tab.id)}
             >
-              {tab.text}
+              <span>
+                <tab.icon />
+              </span>
+              <span className="hidden sm:flex"> {tab.text}</span>
             </button>
           );
         })}
       </header>
       <div className="w-full relative my-6">
-        <CareerItem data={data[activeTab]} careerObject={careerObject} />
+        {activeTab === "certifications" ? (
+          <Certifications data={data[activeTab]} careerObject={careerObject} />
+        ) : (
+          <CareerItem data={data[activeTab]} careerObject={careerObject} />
+        )}
       </div>
       <article className="w-full pt-6 border-t border-[var(--border)]">
         <header className="w-full">
