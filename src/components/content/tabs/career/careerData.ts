@@ -62,6 +62,7 @@ export const data: CareerData = {
       description:
         "Learned to build scalable, maintainable React apps using reusable components, props, dynamic views, and forms for interactive user experiences.",
       image: "./certificates/react.png",
+      url: "https://coursera.org/share/cec3fc5448020a9d3bf7ad6885e820c5",
     },
     {
       id: 1,
@@ -70,6 +71,7 @@ export const data: CareerData = {
       description:
         "Mastered writing clean JavaScript by creating and manipulating objects and arrays, plus ensuring code quality with unit tests using Jest.",
       image: "./certificates/javascript.png",
+      url: "https://coursera.org/share/5728112e049d4049b7fbbdf56ff081c8",
     },
     {
       id: 2,
@@ -78,6 +80,7 @@ export const data: CareerData = {
       description:
         "Earned Micro1’s Front-End Web Developer certification by successfully passing their AI-driven interview process.",
       image: "./certificates/micro1.jpg",
+      url: "https://www.talent.micro1.ai/dashboard",
     },
     {
       id: 3,
@@ -86,14 +89,16 @@ export const data: CareerData = {
       description:
         "Mastered software process models and Agile fundamentals to effectively manage and adapt software development projects.",
       image: "./certificates/agile.png",
+      url: "https://coursera.org/share/38fe7addeffad263c0283cd398a130af",
     },
     {
       id: 4,
       title: "Google - Project Management ",
-      year: "2024",
+      year: "2023",
       description:
         "Grasp project initiation’s importance, create project charters, perform stakeholder analysis with RACI charts, and evaluate project management tools to fit needs.",
       image: "./certificates/project_management.png",
+      url: "https://coursera.org/share/f4fca5e79d0616a87a3cae72cbe44290",
     },
   ],
 };

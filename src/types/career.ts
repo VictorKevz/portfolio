@@ -16,6 +16,7 @@ export interface careerItem {
   year: string;
   description: string;
   image?: string;
+  url?: string;
 }
 export type CareerData = {
   education: careerItem[];
