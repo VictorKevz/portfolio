@@ -1,5 +1,9 @@
 import { AssuredWorkload, CardMembership, School } from "@mui/icons-material";
-import { careerButtonsDataType, CareerData } from "../../../../types/career";
+import {
+  careerButtonsDataType,
+  CareerData,
+  SkillDataType,
+} from "../../../../types/career";
 
 export const careerButtonsData: careerButtonsDataType[] = [
   { id: "experience", text: "Work Experience", icon: AssuredWorkload },
@@ -100,5 +104,33 @@ export const data: CareerData = {
       image: "./certificates/project_management.png",
       url: "https://coursera.org/share/f4fca5e79d0616a87a3cae72cbe44290",
     },
+  ],
+};
+
+export const skills: SkillDataType = {
+  technical: [
+    { name: "JavaScript", icon: "./icons/js.svg" },
+    { name: "TypeScript", icon: "./icons/ts.svg" },
+    { name: "HTML5", icon: "./icons/html.svg" },
+    { name: "CSS3", icon: "./icons/css.svg" },
+    { name: "Tailwind CSS", icon: "./icons/tailwind.svg" },
+    { name: "React", icon: "./icons/react.svg" },
+    { name: "Redux", icon: "./icons/redux.svg" },
+    { name: "Git", icon: "./icons/git.svg" },
+    { name: "GitHub", icon: "./icons/github.svg" },
+    { name: "Vite", icon: "./icons/vite.svg" },
+    { name: "Framer Motion", icon: "./icons/framer-motion.svg" },
+    { name: "Figma", icon: "./icons/figma.svg" },
+    { name: "Canva", icon: "./icons/canva.svg" },
+    { name: "MUI", icon: "./icons/mui.svg" },
+  ],
+  soft: [
+    { name: "Problem-solving" },
+    { name: "Communication" },
+    { name: "Team Player" },
+    { name: "Continuous Learning" },
+    { name: "Adaptability" },
+    { name: "Attention to Detail" },
+    { name: "Leadership" },
   ],
 };

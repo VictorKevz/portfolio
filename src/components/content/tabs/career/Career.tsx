@@ -1,9 +1,9 @@
-import { CheckCircle } from "@mui/icons-material";
 import { useState } from "react";
 import { careerTab } from "../../../../types/career";
 import { careerButtonsData, data } from "./careerData";
 import { CareerItem } from "./CareerItem";
 import { Certifications } from "./Certifications";
+import { Skills } from "./Skills";
 
 export const Career = () => {
   const [activeTab, setActiveTab] = useState<careerTab>("experience");
@@ -43,34 +43,13 @@ export const Career = () => {
       </div>
       <article className="w-full pt-6 border-t border-[var(--border)]">
         <header className="w-full">
-          <h3 className="text-lg sm:text-2xl">Skills</h3>
+          <h3 className="text-lg sm:text-2xl">Soft & Technical Skills</h3>
         </header>
-        <div className="w-full flex items-center justify-between">
-          <ul className="flex flex-col items-start mt-4 md:grid md:grid-cols-2 gap-2">
-            {softSkillsData.map((skill) => (
-              <li
-                key={skill}
-                className="text-[var(--neutral-900)] flex items-center"
-              >
-                <span className="mr-1 text-[var(--neutral-400)]">
-                  <CheckCircle />
-                </span>
-                {skill}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Skills />
       </article>
     </section>
   );
 };
-
-const softSkillsData = [
-  "Communication",
-  "Team player",
-  "Problem-solving",
-  "Continuous learning",
-];
 
 export const TimeLine = () => {
   return (
