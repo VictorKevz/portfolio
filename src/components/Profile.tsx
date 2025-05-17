@@ -95,5 +95,5 @@ const socialLinksData = [
     icon: LinkedIn,
     url: "https://www.linkedin.com/in/victor-kuwandira/",
   },
-  { id: "website", icon: Language, url: "https://victorkevz.com" },
+  { id: "website", icon: Language, url: "https://ww.victorkevz.com" },
 ];
