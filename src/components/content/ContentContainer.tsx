@@ -6,6 +6,7 @@ import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { useRef, useState } from "react";
 import { Contact } from "./tabs/contact/Contact";
 import { Career } from "./tabs/career/Career";
+import { Portfolio } from "./tabs/portfolio/Portfolio";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -53,6 +54,7 @@ export const ContentContainer = () => {
       <div className="w-full ">{activeTab === "about" && <About />}</div>
       <div className="w-full">{activeTab === "contact" && <Contact />}</div>
       {activeTab === "career" && <Career />}
+      {activeTab === "portfolio" && <Portfolio />}
       {activeTab != "contact" && (
         <button
           type="button"

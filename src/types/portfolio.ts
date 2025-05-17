@@ -9,3 +9,7 @@ export type PortfolioItem = {
   liveUrl?: string;
   githubUrl?: string;
 };
+
+export type PortfolioItemProps = {
+  data: PortfolioItem;
+};

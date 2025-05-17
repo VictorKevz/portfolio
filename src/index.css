@@ -21,6 +21,8 @@
   /* --primary-color: #f7b82f; */
 
   --gradient: linear-gradient(to top, #fff, #ebf3fc);
+
+  --faded-gradient: linear-gradient(to top, #ffffffea, #487cd772);
 }
 
 .dark {
@@ -40,6 +42,7 @@
 
   /* --primary-color: #af3cf6; */
   --gradient: linear-gradient(to right, #161616, #1c1f24fe);
+  --faded-gradient: linear-gradient(to top, #070708fa, #487cd772);
 }
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
