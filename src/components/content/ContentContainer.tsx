@@ -5,34 +5,42 @@ import { About } from "./tabs/about/About";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { useRef, useState } from "react";
 import { Contact } from "./tabs/contact/Contact";
+import { Career } from "./tabs/career/Career";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
   const { activeTab } = useNavTabsContext();
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   const tabTitle: Record<tabKey, string> = {
     about: "About Me",
-    projects: "My Projects",
-    career: "Career Journey",
+    portfolio: "My Projects",
+    career: "My Career",
     contact: "Get in Touch",
   };
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollTop = isAtBottom
-        ? 0
-        : sectionRef.current.scrollHeight;
+    const section = sectionRef.current;
+    const body = document.documentElement;
+
+    if (section) {
+      const targetScroll = isAtBottom ? 0 : section.scrollHeight;
+
+      section.scrollTo({ top: targetScroll, behavior: "smooth" });
+
+      body.scrollTo({ top: targetScroll, behavior: "smooth" });
+
       setIsAtBottom(!isAtBottom);
     }
   };
+
   return (
     <section
       ref={sectionRef}
       className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
     >
-      <header className="flex w-full justify-between items-start pl-4">
-        <h2 className="text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-8">
+      <header className="flex w-full justify-between items-start pl-6">
+        <h2 className="text-3xl sm:text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-9">
           {tabTitle[activeTab]}
           <span className="w-12 h-1.5 bg-[var(--secondary-color)] rounded-full"></span>
         </h2>
@@ -44,22 +52,21 @@ export const ContentContainer = () => {
       </header>
       <div className="w-full ">{activeTab === "about" && <About />}</div>
       <div className="w-full">{activeTab === "contact" && <Contact />}</div>
+      {activeTab === "career" && <Career />}
       {activeTab != "contact" && (
-        <div className="hidden xl:flex">
-          <button
-            type="button"
-            onClick={handleScroll}
-            className="fixed right-5 bottom-[13%] w-13 h-13 rounded-full text-[var(--primary-color)] bg-[var(--neutral-300)] backdrop-blur-2xl border border-[var(--border)] shadow-xl shadow-blue-400/20 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/60"
-          >
-            <span className="animate-bounce-down">
-              {isAtBottom ? (
-                <ArrowUpward fontSize="medium" className="scale-110" />
-              ) : (
-                <ArrowDownward fontSize="medium" className="scale-110" />
-              )}
-            </span>
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={handleScroll}
+          className="fixed right-5 bottom-[13%] w-13 h-13 rounded-xl text-[var(--primary-color)] bg-[var(--neutral-200)] shadow-xl shadow-blue-400/10 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/30"
+        >
+          <span className="animate-bounce-down">
+            {isAtBottom ? (
+              <ArrowUpward fontSize="medium" className="scale-110" />
+            ) : (
+              <ArrowDownward fontSize="medium" className="scale-110" />
+            )}
+          </span>
+        </button>
       )}
     </section>
   );

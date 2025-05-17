@@ -5,7 +5,7 @@ export interface NavTabsContextType {
   onUpdate: (key: tabKey) => void;
 }
 
-export type tabKey = "about" | "projects" | "career" | "contact";
+export type tabKey = "about" | "portfolio" | "career" | "contact";
 
 export type navTabsDataType = {
   id: tabKey;

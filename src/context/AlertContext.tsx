@@ -1,7 +1,7 @@
 import { createContext, useContext, useRef, useState } from "react";
 import { AlertContextType } from "../types/alert";
 import { ProviderProps } from "../types/tabs";
-import { AlertState, DefaultAlertState } from "../types/contact";
+import { AlertState, DefaultAlertState } from "../types/alert";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AlertContext = createContext<AlertContextType | undefined>(
