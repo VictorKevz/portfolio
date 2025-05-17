@@ -13,7 +13,7 @@ export const ContentContainer = () => {
 
   const tabTitle: Record<tabKey, string> = {
     about: "About Me",
-    projects: "My Projects",
+    portfolio: "My Projects",
     career: "My Career",
     contact: "Get in Touch",
   };

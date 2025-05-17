@@ -39,7 +39,7 @@ export const NavTabs = () => {
 
 const navTabsData: navTabsDataType[] = [
   { id: "about", text: "About" },
-  { id: "projects", text: "Projects" },
   { id: "career", text: "Career" },
+  { id: "portfolio", text: "Portfolio" },
   { id: "contact", text: "Contact" },
 ];
