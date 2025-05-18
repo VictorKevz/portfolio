@@ -4,14 +4,15 @@ import { PortfolioItemProps } from "../../../../types/portfolio";
 export const PortfolioItem = ({ data }: PortfolioItemProps) => {
   return (
     <div
-      className="group relative min-h-[19rem] w-full bg-cover rounded-xl shadow-xl"
+      className="group relative min-h-[19rem] w-full bg-cover overflow-hidden rounded-xl shadow-2xl hover:shadow-black/20 transition-all ease-in-out duration-300"
       style={{
         backgroundImage: `url(${data.image})`,
         backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       <div
-        className="sm:hidden flex sm:group-hover:flex flex-col absolute bottom-0 h-full w-full px-4 py-5 items-start justify-end cursor-pointer bg-cover  rounded-xl transition-all ease-in-out duration-300"
+        className="flex xl:hidden sm:group-hover:flex flex-col absolute bottom-0 h-full w-full px-4 py-5 items-start justify-end cursor-pointer bg-cover rounded-xl transition-all ease-in-out duration-300"
         style={{ background: `var(--faded-gradient)` }}
       >
         <h3 className="text-xl">{data.title}</h3>

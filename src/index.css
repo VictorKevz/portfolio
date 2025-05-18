@@ -22,7 +22,7 @@
 
   --gradient: linear-gradient(to top, #fff, #ebf3fc);
 
-  --faded-gradient: linear-gradient(to top, #ffffffea, #487cd772);
+  --faded-gradient: linear-gradient(to top, #f2f0f0, #487cd772);
   --toggle-gradient: linear-gradient(to bottom, #ffffffc2, #2b6bda);
 }
 
