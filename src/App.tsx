@@ -35,7 +35,7 @@ export default App;
 
 const MobileNavTabs = () => {
   return (
-    <nav className="lg:hidden fixed bottom-0 w-full backdrop-blur-sm bg-transparent min-h-14 flex items-center px-4 border border-[var(--border)] rounded-t-3xl">
+    <nav className="lg:hidden fixed bottom-0 w-full backdrop-blur-sm bg-[var(--neutral-300)] min-h-14 flex items-center px-4 border border-[var(--border)] rounded-t-3xl shadow-2xl">
       <NavTabs />
     </nav>
   );
