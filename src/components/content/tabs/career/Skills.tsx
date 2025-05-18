@@ -50,7 +50,7 @@ const ScrollingRow = ({ items, direction, speed }: ScrollingRowProps) => {
   return (
     <div className="overflow-hidden w-full relative">
       <motion.ul
-        className="flex gap-4 w-max group"
+        className="flex gap-2 w-max group"
         animate={controls}
         ref={containerRef}
         onMouseEnter={() => controls.stop()}
@@ -76,7 +76,7 @@ const ScrollingRow = ({ items, direction, speed }: ScrollingRowProps) => {
 export const Skills = () => {
   return (
     <div className="w-full flex flex-col items-start gap-5 mt-4">
-      <ScrollingRow items={skills.soft} direction="right" speed={85} />
+      <ScrollingRow items={skills.soft} direction="right" speed={55} />
       <ScrollingRow items={skills.technical} direction="left" speed={75} />
     </div>
   );
