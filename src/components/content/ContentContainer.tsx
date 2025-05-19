@@ -6,6 +6,7 @@ import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { useRef, useState } from "react";
 import { Contact } from "./tabs/contact/Contact";
 import { Career } from "./tabs/career/Career";
+import { Portfolio } from "./tabs/portfolio/Portfolio";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -53,11 +54,12 @@ export const ContentContainer = () => {
       <div className="w-full ">{activeTab === "about" && <About />}</div>
       <div className="w-full">{activeTab === "contact" && <Contact />}</div>
       {activeTab === "career" && <Career />}
+      {activeTab === "portfolio" && <Portfolio />}
       {activeTab != "contact" && (
         <button
           type="button"
           onClick={handleScroll}
-          className="fixed right-5 bottom-[13%] w-13 h-13 rounded-xl text-[var(--primary-color)] bg-[var(--neutral-200)] shadow-xl shadow-blue-400/10 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/30"
+          className="fixed right-4 bottom-[13%] w-13 h-13 rounded-xl text-[var(--primary-color)] bg-[var(--neutral-200)] shadow-xl shadow-blue-400/10 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/30"
         >
           <span className="animate-bounce-down">
             {isAtBottom ? (
