@@ -12,7 +12,7 @@ export const Portfolio = () => {
   }, [activeTab]);
   return (
     <section className="w-full mt-10 px-6 ">
-      <ul className="w-full flex items-start gap-2 border-b border-[var(--border)]">
+      <ul className="w-full flex items-start gap-2 md:gap-4 border-b border-[var(--border)]">
         {portfolioTabs.map((item) => {
           const isActive = activeTab === item;
           return (
@@ -20,9 +20,9 @@ export const Portfolio = () => {
               key={item}
               type="button"
               onClick={() => setActiveTab(item)}
-              className={`font-bold h-8 sm:h-11 sm:max-w-[12rem] w-full px-2 sm:px-4 rounded-t-xl ${
+              className={`font-bold h-8 sm:h-11 sm:max-w-[12rem] w-full px-2 sm:px-4 rounded-t-xl hover:bg-[var(--primary-color)] hover:text-white ${
                 isActive
-                  ? "text-white bg-[var(--primary-color)] mx-3"
+                  ? "text-white bg-[var(--primary-color)]"
                   : "text-[var(--neutral-900)] bg-[var(--neutral-300)]"
               }`}
             >

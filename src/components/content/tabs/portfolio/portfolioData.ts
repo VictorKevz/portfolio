@@ -13,7 +13,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "Siili Parking Pools",
     description: "Frontend features for a parking pool app at Siili Oy.",
     category: "clients",
-    liveUrl: "",
+    liveUrl: "https://www.siili.com/",
     githubUrl: "",
   },
   {
