@@ -3,10 +3,12 @@ import { tabKey } from "../../types/tabs";
 import { useNavTabsContext } from "../../context/NavTabsContext";
 import { About } from "./tabs/about/About";
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
-import { useRef, useState } from "react";
+import { JSX, useRef, useState } from "react";
 import { Contact } from "./tabs/contact/Contact";
 import { Career } from "./tabs/career/Career";
 import { Portfolio } from "./tabs/portfolio/Portfolio";
+import { AnimationWrapper } from "../../animations/AnimationWrapper";
+import { TabVariants } from "../../animations/animations";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -35,6 +37,12 @@ export const ContentContainer = () => {
     }
   };
 
+  const components: Record<tabKey, JSX.Element> = {
+    about: <About />,
+    career: <Career />,
+    portfolio: <Portfolio />,
+    contact: <Contact />,
+  };
   return (
     <section
       ref={sectionRef}
@@ -51,10 +59,10 @@ export const ContentContainer = () => {
           </nav>
         </div>
       </header>
-      <div className="w-full ">{activeTab === "about" && <About />}</div>
-      <div className="w-full">{activeTab === "contact" && <Contact />}</div>
-      {activeTab === "career" && <Career />}
-      {activeTab === "portfolio" && <Portfolio />}
+      <AnimationWrapper variants={TabVariants} index={20} keyValue={activeTab}>
+        <div className="w-full ">{components[activeTab]}</div>
+      </AnimationWrapper>
+
       {activeTab != "contact" && (
         <button
           type="button"
