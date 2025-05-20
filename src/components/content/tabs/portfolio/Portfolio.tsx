@@ -31,6 +31,7 @@ export const Portfolio = () => {
           );
         })}
       </ul>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
         {filteredProjects.map((data) => (
           <PortfolioItem key={data.id} data={data} />

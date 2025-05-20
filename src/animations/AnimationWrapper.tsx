@@ -3,8 +3,9 @@ import { ReactNode } from "react";
 
 type AnimationWrapperProps = {
   children: ReactNode;
-  variants: (i: number) => Variants;
+  variants: (i: number, scale: number) => Variants;
   index: number;
+  scale: number;
   keyValue: string | number;
 };
 
@@ -13,13 +14,14 @@ export const AnimationWrapper = ({
   variants,
   index,
   keyValue,
+  scale,
 }: AnimationWrapperProps) => {
   return (
     <AnimatePresence mode="wait">
       <motion.div
         className="w-full"
         key={keyValue}
-        variants={variants(index)}
+        variants={variants(index, scale)}
         initial="hidden"
         animate="visible"
         exit="exit"

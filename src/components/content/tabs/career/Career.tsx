@@ -36,7 +36,12 @@ export const Career = () => {
           );
         })}
       </header>
-      <AnimationWrapper variants={TabVariants} index={10} keyValue={activeTab}>
+      <AnimationWrapper
+        variants={TabVariants}
+        index={10}
+        keyValue={activeTab}
+        scale={1.03}
+      >
         <div className="w-full relative my-6">
           {activeTab === "certifications" ? (
             <Certifications

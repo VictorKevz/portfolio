@@ -59,7 +59,12 @@ export const ContentContainer = () => {
           </nav>
         </div>
       </header>
-      <AnimationWrapper variants={TabVariants} index={20} keyValue={activeTab}>
+      <AnimationWrapper
+        variants={TabVariants}
+        index={20}
+        keyValue={activeTab}
+        scale={0.95}
+      >
         <div className="w-full ">{components[activeTab]}</div>
       </AnimationWrapper>
 

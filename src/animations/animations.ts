@@ -1,8 +1,9 @@
-export const TabVariants = (i: number) => ({
-  hidden: { y: -i, opacity: 0 },
+export const TabVariants = (i: number, scale: number) => ({
+  hidden: { y: -i, opacity: 0, scale: scale },
   visible: {
     y: 0,
     opacity: 1,
+    scale: 1,
     transition: {
       type: "tween",
       ease: "easeInOut",
