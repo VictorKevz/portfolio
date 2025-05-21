@@ -20,7 +20,7 @@ const Profile = () => {
       layout
       transition={{
         type: "spring",
-        damping: 20,
+        damping: 25,
         stiffness: 150,
       }}
       className="xl:max-w-72 w-full relative bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg"
