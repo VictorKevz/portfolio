@@ -11,7 +11,7 @@ export const Portfolio = () => {
     return portfolioData.filter((item) => item.category === activeTab);
   }, [activeTab]);
   return (
-    <section className="w-full mt-10 px-6 ">
+    <div className="w-full mt-10 px-6 ">
       <ul className="w-full flex items-start gap-2 md:gap-4 border-b border-[var(--border)]">
         {portfolioTabs.map((item) => {
           const isActive = activeTab === item;
@@ -31,11 +31,12 @@ export const Portfolio = () => {
           );
         })}
       </ul>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
         {filteredProjects.map((data) => (
           <PortfolioItem key={data.id} data={data} />
         ))}
       </div>
-    </section>
+    </div>
   );
 };

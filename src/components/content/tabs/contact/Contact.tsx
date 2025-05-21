@@ -1,4 +1,6 @@
 import { useCallback, useState } from "react";
+import { motion } from "framer-motion";
+
 import contactImg from "../../../../assets/images/contact.svg";
 import {
   FormSubmitEvent,
@@ -11,6 +13,7 @@ import {
 import { InputField } from "./InputField";
 import { Send } from "@mui/icons-material";
 import { useAlertContext } from "../../../../context/AlertContext";
+import { useNavTabsContext } from "../../../../context/NavTabsContext";
 
 export const Contact = () => {
   //States....................................................
@@ -21,7 +24,7 @@ export const Contact = () => {
     message: true,
   });
   const { handleAlert } = useAlertContext();
-
+  const { onUpdate } = useNavTabsContext();
   //Handlers....................................................
   const handleChange = useCallback((event: InputEvent) => {
     const { name, value } = event.target;
@@ -54,6 +57,9 @@ export const Contact = () => {
       show: true,
     });
     setForm(EmptyFormFields);
+
+    //redirect to about tab after 2 seconds
+    setTimeout(() => onUpdate("about"), 1500);
   };
 
   const handleValidation = () => {
@@ -69,6 +75,8 @@ export const Contact = () => {
 
     return isValid;
   };
+
+  const isValid = Object.values(formValid).every(Boolean);
 
   //Data....................................................
   const formFieldsData: FormFieldsDataType[] = [
@@ -113,8 +121,13 @@ export const Contact = () => {
         <figure className="w-[70%] lg:w-[50%]">
           <img src={contactImg} alt="" className="w-full h-auto" />
         </figure>
-        <form
+        <motion.form
           onSubmit={(e: FormSubmitEvent) => handleSubmit(e)}
+          key={!isValid ? "error" : "normal"}
+          animate={!isValid ? { x: [0, -10, 10, -10, 0] } : {}}
+          transition={{
+            duration: 0.4,
+          }}
           className="w-full md:w-[90%] flex flex-col items-start gap-3 relative"
         >
           {formFieldsData.map((field) => {
@@ -134,7 +147,7 @@ export const Contact = () => {
               <Send className="-rotate-45" /> Send Message
             </button>
           </div>
-        </form>
+        </motion.form>
       </div>
     </div>
   );

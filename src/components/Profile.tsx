@@ -8,13 +8,27 @@ import {
   MailLockOutlined,
   PhonelinkRingOutlined,
 } from "@mui/icons-material";
+import { motion } from "framer-motion";
+
 import profilePic from "../assets/images/profile.png";
 import { useState } from "react";
+import { ContainerVariants } from "../animations/animations";
 
 const Profile = () => {
   const [showContacts, setShowContacts] = useState<boolean>(false);
   return (
-    <aside className="xl:max-w-72 w-full relative bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg transition-all duration-300 ease-in-out">
+    <motion.aside
+      layout
+      transition={{
+        type: "spring",
+        damping: 25,
+        stiffness: 150,
+      }}
+      variants={ContainerVariants(-100)}
+      initial="hidden"
+      animate="visible"
+      className="xl:max-w-72 w-full relative bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg"
+    >
       <header className="w-full flex items-center gap-4 xl:flex-col pb-3">
         <div
           className="min-h-20 w-20 sm:w-40 sm:min-h-40 lg:w-35 xl:min-h-35 bg-cover px-1.5 rounded-2xl bg-[var(--neutral-300)] flex items-center justify-center shadow-lg"
@@ -86,7 +100,7 @@ const Profile = () => {
           </span>
         </button>
       </div>
-    </aside>
+    </motion.aside>
   );
 };
 
