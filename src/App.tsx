@@ -20,7 +20,7 @@ function App() {
           <NavTabsProvider>
             <motion.div
               layout
-              className="w-full flex flex-col items-center xl:flex-row xl:items-start justify-center gap-16 px-4 mt-24 pb-32 xl:mt-20 lg:pb-12"
+              className="w-full flex flex-col items-center xl:flex-row xl:items-start justify-center gap-7 xl:gap-16 px-4 mt-24 pb-32 xl:mt-20 lg:pb-12"
             >
               <Profile />
               <ContentContainer />

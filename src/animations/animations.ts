@@ -22,27 +22,17 @@ export const TabVariants = (i: number, scale: number) => ({
   },
 });
 
-export const ToggleContactsVariants = {
-  hidden: { y: 0, opacity: 0 },
+export const ContainerVariants = (direction: number) => ({
+  hidden: { x: direction, opacity: 0, scale: 0.96 },
   visible: {
-    y: 0,
+    x: 0,
+    scale: 1,
     opacity: 1,
     transition: {
-      type: "spring",
-      damping: 20,
-      stiffness: 200,
-      bounce: 0.5,
-    },
-  },
-  exit: {
-    y: "100",
-    opacity: 0,
-    transition: {
-      type: "spring",
-      damping: 20,
-      stiffness: 200,
-      bounce: 0.5,
+      type: "tween",
+      delay: 0.1,
+      ease: "easeInOut",
       duration: 0.5,
     },
   },
-};
+});

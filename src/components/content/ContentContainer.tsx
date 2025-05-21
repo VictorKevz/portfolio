@@ -8,7 +8,7 @@ import { Contact } from "./tabs/contact/Contact";
 import { Career } from "./tabs/career/Career";
 import { Portfolio } from "./tabs/portfolio/Portfolio";
 import { AnimationWrapper } from "../../animations/AnimationWrapper";
-import { TabVariants } from "../../animations/animations";
+import { ContainerVariants, TabVariants } from "../../animations/animations";
 import { motion } from "framer-motion";
 export const ContentContainer = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
@@ -46,7 +46,9 @@ export const ContentContainer = () => {
   };
   return (
     <motion.section
-      layout
+      variants={ContainerVariants(100)}
+      initial="hidden"
+      animate="visible"
       ref={sectionRef}
       className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
     >

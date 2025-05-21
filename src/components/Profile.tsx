@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 
 import profilePic from "../assets/images/profile.png";
 import { useState } from "react";
+import { ContainerVariants } from "../animations/animations";
 
 const Profile = () => {
   const [showContacts, setShowContacts] = useState<boolean>(false);
@@ -23,6 +24,9 @@ const Profile = () => {
         damping: 25,
         stiffness: 150,
       }}
+      variants={ContainerVariants(-100)}
+      initial="hidden"
+      animate="visible"
       className="xl:max-w-72 w-full relative bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg"
     >
       <header className="w-full flex items-center gap-4 xl:flex-col pb-3">
