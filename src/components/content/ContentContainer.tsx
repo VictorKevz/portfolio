@@ -72,21 +72,21 @@ export const ContentContainer = () => {
         <div className="w-full ">{components[activeTab]}</div>
       </AnimationWrapper>
 
-      {activeTab != "contact" && (
-        <button
-          type="button"
-          onClick={handleScroll}
-          className="fixed right-4 bottom-[13%] w-13 h-13 rounded-xl text-[var(--primary-color)] bg-[var(--neutral-200)] shadow-xl shadow-blue-400/10 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/30"
-        >
-          <span className="animate-bounce-down">
-            {isAtBottom ? (
-              <ArrowUpward fontSize="medium" className="scale-110" />
-            ) : (
-              <ArrowDownward fontSize="medium" className="scale-110" />
-            )}
-          </span>
-        </button>
-      )}
+      <button
+        type="button"
+        onClick={handleScroll}
+        className={`fixed right-4 bottom-[13%] w-13 h-13 rounded-xl text-[var(--primary-color)] bg-[var(--neutral-200)] shadow-xl shadow-blue-400/10 hover:bg-[var(--primary-color)] hover:text-white hover:shadow-blue-400/30 ${
+          activeTab === "contact" ? "xl:opacity-0" : ""
+        }`}
+      >
+        <span className="animate-bounce-down">
+          {isAtBottom ? (
+            <ArrowUpward fontSize="medium" className="scale-110" />
+          ) : (
+            <ArrowDownward fontSize="medium" className="scale-110" />
+          )}
+        </span>
+      </button>
     </motion.section>
   );
 };

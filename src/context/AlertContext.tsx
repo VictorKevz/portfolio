@@ -19,7 +19,7 @@ export const AlertProvider = ({ children }: ProviderProps) => {
 
     timeOutId.current = setTimeout(() => {
       setAlert({ ...update, show: false }); // hide alert after 3.5 seconds
-    }, 3500);
+    }, 3000);
   };
 
   return (

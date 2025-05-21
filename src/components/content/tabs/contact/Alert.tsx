@@ -1,10 +1,19 @@
 import { Alert } from "@mui/material";
+
 import { useAlertContext } from "../../../../context/AlertContext";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { AlertProps } from "../../../../types/alert";
+import { AlertVariants } from "../../../../animations/animations";
+
 export const AlertItem = ({ alert }: AlertProps) => {
   return (
-    <div className="max-w-xs w-full">
+    <motion.div
+      variants={AlertVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="max-w-xs w-full mx-auto top-10 fixed z-555"
+    >
       <Alert
         variant="filled"
         severity={alert.severity}
@@ -12,7 +21,7 @@ export const AlertItem = ({ alert }: AlertProps) => {
       >
         {alert.message}
       </Alert>
-    </div>
+    </motion.div>
   );
 };
 
@@ -21,11 +30,7 @@ export const AlertWrapper = () => {
 
   return (
     <AnimatePresence>
-      {alert.show && (
-        <div className="w-full fixed flex items-center justify-center top-8">
-          <AlertItem alert={alert} />
-        </div>
-      )}
+      {alert.show && <AlertItem alert={alert} />}
     </AnimatePresence>
   );
 };
