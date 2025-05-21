@@ -7,6 +7,7 @@ import ThemeButton from "./components/ThemeButton";
 import { AlertProvider } from "./context/AlertContext";
 import { NavTabsProvider } from "./context/NavTabsContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import { motion } from "framer-motion";
 
 function App() {
   return (
@@ -17,10 +18,13 @@ function App() {
           style={{ background: "var(--gradient)" }}
         >
           <NavTabsProvider>
-            <div className="w-full flex flex-col items-center xl:flex-row xl:items-start justify-center gap-16 px-4 mt-24 pb-32 xl:mt-20 lg:pb-12">
+            <motion.div
+              layout
+              className="w-full flex flex-col items-center xl:flex-row xl:items-start justify-center gap-16 px-4 mt-24 pb-32 xl:mt-20 lg:pb-12"
+            >
               <Profile />
               <ContentContainer />
-            </div>
+            </motion.div>
             <MobileNavTabs />
           </NavTabsProvider>
           <AlertWrapper />
