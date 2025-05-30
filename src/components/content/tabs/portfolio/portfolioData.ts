@@ -39,7 +39,7 @@ export const portfolioData: PortfolioItem[] = [
     image: "./projects/invoEase.png",
     title: "InvoEase App",
     description: "App for creating and tracking invoices.",
-    category: "clients",
+    category: "personal",
     liveUrl: "https://victorkevz.github.io/InvoEase/",
     githubUrl: "https://github.com/VictorKevz/InvoEase",
   },
