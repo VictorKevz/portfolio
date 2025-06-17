@@ -9,7 +9,7 @@ export const portfolioTabs: PortfolioCategory[] = [
 export const portfolioData: PortfolioItem[] = [
   {
     id: 0,
-    image: "./projects/siili.svg",
+    image: "./projects/siili.png",
     title: "Siili Parking Pools",
     description: "Frontend features for a parking pool app at Siili Oy.",
     category: "clients",
@@ -27,7 +27,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: 2,
-    image: "./projects/ip-address-tracker.svg",
+    image: "./projects/ip-address-tracker.png",
     title: "IP Adress Tracker",
     description: "Tracks IP geolocation data on a map.",
     category: "personal",
@@ -36,7 +36,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: 3,
-    image: "./projects/invoEase.png",
+    image: "./projects/invoice.png",
     title: "InvoEase App",
     description: "App for creating and tracking invoices.",
     category: "personal",
