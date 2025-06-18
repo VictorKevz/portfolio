@@ -20,7 +20,7 @@ export const portfolioData: PortfolioItem[] = [
     id: 1,
     image: "./projects/notes-app.png",
     title: "Notes App",
-    description: "CRUD notes app with tags, themes, and search.",
+    description: "CRUD notes app with tags and search.",
     category: "personal",
     liveUrl: "https://victorkevz.github.io/Notes_App/",
     githubUrl: "https://github.com/VictorKevz/Notes_App",

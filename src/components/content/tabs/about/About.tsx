@@ -1,5 +1,6 @@
+import { Skills } from "../career/Skills";
 import { servicesData } from "./AboutData";
-import { Hobbies } from "./Hobbies";
+// import { Hobbies } from "./Hobbies";
 
 export const About = () => {
   return (
@@ -46,7 +47,12 @@ export const About = () => {
           ))}
         </div>
       </div>
-      <Hobbies />
+      <article className="w-full pt-6 border-t border-[var(--border)]">
+        <header className="w-full">
+          <h3 className="text-lg sm:text-2xl">Soft & Technical Skills</h3>
+        </header>
+        <Skills />
+      </article>{" "}
     </div>
   );
 };
