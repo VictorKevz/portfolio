@@ -12,21 +12,34 @@ export const PortfolioItem = ({ data }: PortfolioItemProps) => {
       keyValue={data.category}
       scale={0.9}
     >
-      <div
-        className="group relative min-h-[19rem] w-full bg-cover overflow-hidden rounded-xl shadow-2xl hover:shadow-black/20 transition-all ease-in-out duration-300"
-        style={{
-          backgroundImage: `url(${data.image})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div
-          className="flex xl:hidden sm:group-hover:flex flex-col absolute bottom-0 h-full w-full px-4 py-5 items-start justify-end cursor-pointer bg-cover rounded-xl transition-all ease-in-out duration-300"
-          style={{ background: `var(--faded-gradient)` }}
-        >
+      <article className="relative w-full overflow-hidden rounded-2xl shadow-2xl hover:shadow-black/20 transition-all ease-in-out duration-300  border border-[var(--border)]">
+        <header className="group p-2.5">
+          <div
+            className="w-full min-h-[250px] rounded-xl bg-center"
+            style={{
+              backgroundImage: `url(${data.image})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
+        </header>
+        <div className="w-full my-4 px-4 pb-4 border-b border-[var(--border)]">
           <h3 className="text-xl">{data.title}</h3>
           <p className="">{data.description}</p>
-          <div className="w-full flex gap-3 mt-3">
+          <ul className="flex items-center w-full mt-2.5">
+            {data.tools.map((tool, index) => (
+              <li
+                key={index}
+                className="w-12 h-12 flex justify-center items-center rounded-full border border-[var(--border)] not-first:-ml-4 bg-[var(--neutral-300)]"
+              >
+                <img src={tool} alt="" className="w-6 h-6" />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col w-full px-4 pb-4 items-start justify-end cursor-pointer transition-all ease-in-out duration-300">
+          <div className="w-full flex gap-3">
             <a
               href={data.liveUrl}
               target="_blank"
@@ -50,7 +63,7 @@ export const PortfolioItem = ({ data }: PortfolioItemProps) => {
             </a>
           </div>
         </div>
-      </div>
+      </article>
     </AnimationWrapper>
   );
 };

@@ -11,7 +11,13 @@ export const Portfolio = () => {
     return portfolioData.filter((item) => item.category === activeTab);
   }, [activeTab]);
   return (
-    <div className="w-full mt-10 px-6 ">
+    <div className="w-full px-6 ">
+      <p className="mt-8 mb-5 w-[90%]">
+        Here’s a curated list of projects spanning client work, academic
+        assignments, and personal builds, each focused on solving real problems,
+        delivering measurable outcomes, and demonstrating my ability to execute
+        from concept to deployment.
+      </p>
       <ul className="w-full flex items-start gap-2 md:gap-4 border-b border-[var(--border)]">
         {portfolioTabs.map((item) => {
           const isActive = activeTab === item;
@@ -32,7 +38,7 @@ export const Portfolio = () => {
         })}
       </ul>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 mt-8">
         {filteredProjects.map((data) => (
           <PortfolioItem key={data.id} data={data} />
         ))}

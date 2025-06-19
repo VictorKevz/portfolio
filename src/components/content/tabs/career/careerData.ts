@@ -118,6 +118,7 @@ export const skills: SkillDataType = {
     { name: "Redux", icon: "./icons/redux.svg" },
     { name: "Git", icon: "./icons/git.svg" },
     { name: "GitHub", icon: "./icons/github.svg" },
+    { name: "GitLab", icon: "./icons/gitlab.svg" },
     { name: "Vite", icon: "./icons/vite.svg" },
     { name: "Framer Motion", icon: "./icons/framer-motion.svg" },
     { name: "Figma", icon: "./icons/figma.svg" },

@@ -9,39 +9,66 @@ export const portfolioTabs: PortfolioCategory[] = [
 export const portfolioData: PortfolioItem[] = [
   {
     id: 0,
-    image: "./projects/siili.svg",
-    title: "Siili Parking Pools",
-    description: "Frontend features for a parking pool app at Siili Oy.",
+    image: "./projects/siili2.png",
+    title: "Parking Pools",
+    description:
+      "Frontend feature development and UI enhancements in a 3-member team, improving usability, responsiveness, and code quality for a parking app during a client-engaged school project. ",
     category: "clients",
     liveUrl: "https://www.siili.com/",
     githubUrl: "",
+    tools: [
+      "./icons/react.svg",
+      "./icons/tailwind.svg",
+      "./icons/ts.svg",
+      "./icons/gitlab.svg",
+    ],
   },
   {
     id: 1,
-    image: "./projects/notes-app.png",
-    title: "Notes App",
-    description: "CRUD notes app with tags, themes, and search.",
-    category: "personal",
-    liveUrl: "https://victorkevz.github.io/Notes_App/",
-    githubUrl: "https://github.com/VictorKevz/Notes_App",
-  },
-  {
-    id: 2,
-    image: "./projects/ip-address-tracker.svg",
+    image: "./projects/ip-address-tracker1.png",
     title: "IP Adress Tracker",
-    description: "Tracks IP geolocation data on a map.",
+    description:
+      "Redesigned an interactive IP tracker featuring live search, animated UI, error modals, dark/light themes, and localStorage-based history—optimized for accessibility, responsiveness, and user experience.",
     category: "personal",
     liveUrl: "https://victorkevz.github.io/ip-address-tracker/",
     githubUrl: "https://github.com/VictorKevz/ip-address-tracker",
+    tools: [
+      "./icons/framer-motion.svg",
+      "./icons/react.svg",
+      "./icons/ts.svg",
+      "./icons/github.svg",
+    ],
   },
   {
+    id: 2,
+    image: "./projects/notes-app.png",
+    title: "Notes App",
+    description: "CRUD notes app with tags and search.",
+    category: "personal",
+    liveUrl: "https://victorkevz.github.io/Notes_App/",
+    githubUrl: "https://github.com/VictorKevz/Notes_App",
+    tools: [
+      "./icons/react.svg",
+      "./icons/js.svg",
+      "./icons/css.svg",
+      "./icons/mui.svg",
+    ],
+  },
+
+  {
     id: 3,
-    image: "./projects/invoEase.png",
+    image: "./projects/invoice.png",
     title: "InvoEase App",
     description: "App for creating and tracking invoices.",
     category: "personal",
     liveUrl: "https://victorkevz.github.io/InvoEase/",
     githubUrl: "https://github.com/VictorKevz/InvoEase",
+    tools: [
+      "./icons/react.svg",
+      "./icons/js.svg",
+      "./icons/css.svg",
+      "./icons/framer-motion.svg",
+    ],
   },
   {
     id: 4,
@@ -51,5 +78,11 @@ export const portfolioData: PortfolioItem[] = [
     category: "personal",
     liveUrl: "https://victorkevz.github.io/Task-Manager/",
     githubUrl: "https://github.com/VictorKevz/Task-Manager",
+    tools: [
+      "./icons/react.svg",
+      "./icons/js.svg",
+      "./icons/mui.svg",
+      "./icons/vite.svg",
+    ],
   },
 ];

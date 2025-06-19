@@ -3,7 +3,6 @@ import { careerTab } from "../../../../types/career";
 import { careerButtonsData, data } from "./careerData";
 import { CareerItem } from "./CareerItem";
 import { Certifications } from "./Certifications";
-import { Skills } from "./Skills";
 import { AnimationWrapper } from "../../../../animations/AnimationWrapper";
 import { TabVariants } from "../../../../animations/animations";
 
@@ -53,12 +52,6 @@ export const Career = () => {
           )}
         </div>
       </AnimationWrapper>
-      <article className="w-full pt-6 border-t border-[var(--border)]">
-        <header className="w-full">
-          <h3 className="text-lg sm:text-2xl">Soft & Technical Skills</h3>
-        </header>
-        <Skills />
-      </article>
     </div>
   );
 };
