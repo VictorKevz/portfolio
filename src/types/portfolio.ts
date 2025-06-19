@@ -1,5 +1,5 @@
 export type PortfolioCategory = "all" | "clients" | "personal";
-
+type tools = string;
 export type PortfolioItem = {
   id: number;
   image: string;
@@ -8,6 +8,7 @@ export type PortfolioItem = {
   category: PortfolioCategory;
   liveUrl?: string;
   githubUrl?: string;
+  tools: [tools, tools, tools, tools];
 };
 
 export type PortfolioItemProps = {
