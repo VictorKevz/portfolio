@@ -43,7 +43,8 @@ export const portfolioData: PortfolioItem[] = [
     id: 2,
     image: "./projects/notes-app.png",
     title: "Notes App",
-    description: "CRUD notes app with tags and search.",
+    description:
+      "Responsive, accessible note-taking app enabling CRUD, archiving, tag filtering, search, and theme customization. Built with React, animated with Framer Motion, supporting keyboard navigation and seamless user experience.",
     category: "personal",
     liveUrl: "https://victorkevz.github.io/Notes_App/",
     githubUrl: "https://github.com/VictorKevz/Notes_App",
