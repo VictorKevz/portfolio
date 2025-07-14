@@ -33,10 +33,26 @@ export const portfolioData: PortfolioItem[] = [
     liveUrl: "https://victorkevz.github.io/ip-address-tracker/",
     githubUrl: "https://github.com/VictorKevz/ip-address-tracker",
     tools: [
-      "./icons/framer-motion.svg",
       "./icons/react.svg",
+      "./icons/framer-motion.svg",
       "./icons/ts.svg",
       "./icons/github.svg",
+    ],
+  },
+  {
+    id: 4,
+    image: "./projects/bookManager.png",
+    title: "BookManager App",
+    description:
+      "A full-stack book inventory dashboard enabling authenticated users to manage personal libraries with CRUD functionality, theme and language preferences, responsive design, and secure data storage via Supabase.",
+    category: "personal",
+    liveUrl: "https://book-manager-sigma-seven.vercel.app/",
+    githubUrl: "https://github.com/VictorKevz/book-manager",
+    tools: [
+      "./icons/supabase.svg",
+      "./icons/react.svg",
+      "./icons/tailwind.svg",
+      "./icons/vercel.png",
     ],
   },
   {
@@ -60,7 +76,8 @@ export const portfolioData: PortfolioItem[] = [
     id: 3,
     image: "./projects/invoice.png",
     title: "InvoEase App",
-    description: "App for creating and tracking invoices.",
+    description:
+      "InvoEase is a multilinguial invoice management app featuring invoice creation, editing, deletion, status tracking (Draft, Pending, Paid), and improved accessibility and enhanced from a Frontend Mentor challenge.",
     category: "personal",
     liveUrl: "https://victorkevz.github.io/InvoEase/",
     githubUrl: "https://github.com/VictorKevz/InvoEase",
@@ -69,21 +86,6 @@ export const portfolioData: PortfolioItem[] = [
       "./icons/js.svg",
       "./icons/css.svg",
       "./icons/framer-motion.svg",
-    ],
-  },
-  {
-    id: 4,
-    image: "./projects/taskHub.png",
-    title: "TaskHub App",
-    description: "Kanban-style task management tool.",
-    category: "personal",
-    liveUrl: "https://victorkevz.github.io/Task-Manager/",
-    githubUrl: "https://github.com/VictorKevz/Task-Manager",
-    tools: [
-      "./icons/react.svg",
-      "./icons/js.svg",
-      "./icons/mui.svg",
-      "./icons/vite.svg",
     ],
   },
 ];
