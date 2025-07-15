@@ -50,7 +50,7 @@ export const ContentContainer = () => {
       initial="hidden"
       animate="visible"
       ref={sectionRef}
-      className="relative max-w-screen-xl w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:h-[44rem] overflow-y-auto no-scrollbar"
+      className="relative max-w-screen-lg w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:min-h-[44rem] overflow-y-auto no-scrollbar"
     >
       <header className="flex w-full justify-between items-start pl-6">
         <h2 className="text-3xl sm:text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-9">

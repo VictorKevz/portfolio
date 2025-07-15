@@ -14,8 +14,8 @@ function App() {
     <ThemeProvider>
       <AlertProvider>
         <main
-          className="w-full min-h-dvh bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center gap-4 relative"
-          style={{ backgroundImage: "var(--main-bg)" }}
+          className="w-full min-h-dvh bg-[var(--neutral-0)] flex flex-col items-center justify-center gap-4 relative"
+          // style={{ backgroundImage: "var(--main-bg)" }}
         >
           <NavTabsProvider>
             <motion.div
@@ -39,7 +39,7 @@ export default App;
 
 const MobileNavTabs = () => {
   return (
-    <nav className="lg:hidden fixed bottom-0 w-full backdrop-blur-2xl bg-transparent min-h-14 flex items-center px-4 border border-[var(--border)] rounded-t-3xl shadow-2xl">
+    <nav className="lg:hidden fixed bottom-0 w-full bg-[var(--neutral-200)] min-h-14 flex items-center px-4 border-t border-[var(--border)] rounded-t-3xl shadow-2xl">
       <NavTabs />
     </nav>
   );

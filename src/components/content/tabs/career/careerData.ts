@@ -45,14 +45,14 @@ export const data: CareerData = {
     },
     {
       id: 1,
-      title: "Co-Founder & Technical Lead",
-      year: "2020 – 2023",
+      title: "Co-Founder & Technical Lead - Zimbabwe",
+      year: "2020 – 2022",
       description:
-        "Built and maintained e-commerce platform using Ecwid for a startup. Led tech operations, managed logistics, and provided post-sale support for smart security devices exported to Zimbabwe.",
+        "Built and maintained e-commerce platform using Ecwid for a startup. Led tech operations, managed logistics, and provided post-sale support for smart security devices in Zimbabwe.",
     },
     {
       id: 2,
-      title: "Web Development Intern",
+      title: "Web Development Intern - China",
       year: "2021",
       description:
         "Assisted in developing a Shanghai Dianji's university library portal using HTML, CSS, and JS. Gained hands-on experience building UIs and contributing to production code.",
