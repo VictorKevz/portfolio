@@ -12,7 +12,7 @@ export const Career = () => {
     careerButtonsData.find((obj) => obj.id === activeTab) ||
     careerButtonsData[0];
   return (
-    <div className="w-full mt-10 px-6 ">
+    <div className="w-full mt-10 px-4 ">
       <header className="w-full border-b border-[var(--border)] flex items-center gap-4 text-[var(--neutral-900)]">
         {careerButtonsData.map((tab) => {
           const isActive = activeTab === tab.id;

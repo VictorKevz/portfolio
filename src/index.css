@@ -2,6 +2,7 @@
 @import "tailwindcss";
 :root {
   --neutral-0: #fff;
+  --neutral-100: #edf3f6;
   --neutral-200: #dededc;
   --neutral-300: #f0f4f5;
   --neutral-400: #606162; /* for small text */
@@ -12,13 +13,8 @@
   --border: #e4f1ff;
   --red-100: #df5a5a;
 
-  /* To be decided */
-  --primary-color: #f7b82f;
   --primary-color: #2f4ebd;
-  /* --primary-color: #940ae9; */
   --secondary-color: #6193ea;
-  /* --secondary-color: #940ae9; */
-  /* --primary-color: #f7b82f; */
 
   --gradient: linear-gradient(to top, #fff, #ebf3fc);
   --main-bg: url("/light-main-bg2.png");
@@ -28,6 +24,7 @@
 
 .dark {
   --neutral-0: #1e1e1f;
+  --neutral-100: #333339;
   --neutral-200: #333334;
   --neutral-300: #2b2b2c;
   --neutral-400: #8c8e90;
@@ -36,7 +33,6 @@
   --neutral-1000: #fff;
 
   --primary-color: #2b6bda;
-  /* --primary-color: #f7b82f; */
 
   --border: #343434;
   --red-100: #e77e7e;

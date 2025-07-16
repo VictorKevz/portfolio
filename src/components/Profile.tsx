@@ -27,7 +27,7 @@ const Profile = () => {
       variants={ContainerVariants(-100)}
       initial="hidden"
       animate="visible"
-      className="xl:max-w-72 w-full sticky top-10 bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg"
+      className="max-w-screen-lg xl:max-w-72 w-full sticky top-10 bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg"
     >
       <header className="w-full flex items-center gap-4 xl:flex-col pb-3">
         <div

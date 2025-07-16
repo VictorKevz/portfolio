@@ -11,7 +11,7 @@ export const Portfolio = () => {
     return portfolioData.filter((item) => item.category === activeTab);
   }, [activeTab]);
   return (
-    <div className="w-full px-6 ">
+    <div className="w-full px-4 ">
       <p className="mt-8 mb-5 w-[90%]">
         Here’s a curated list of projects spanning client work, academic
         assignments, and personal builds, each focused on solving real problems,

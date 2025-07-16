@@ -1,25 +1,24 @@
-# Victor's Developer Portfolio 🚀
+# Victor's Portfolio 
 
 Welcome to my official web development portfolio — a reflection of my skills, design taste, and ability to build clean, modern user interfaces using cutting-edge frontend technologies.
 
-## 🔗 Live Site
+## Live Site
 
 👉 [https://victorkevz.com](https://victorkevz.com)
 
 
-## 📌 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Tech Stack](#-tech-stack)
 - [Features](#-features)
 - [Project Structure](#-project-structure)
-- [Development](#-development)
 - [Deployment](#-deployment)
 - [Credits](#-credits)
 - [License](#-license)
 
 
-## 📄 Overview
+## Overview
 
 This portfolio is a **single-page application (SPA)** built with **React + Vite**, showcasing my frontend skills through dynamic animations, modern UI, and performance-conscious architecture.
 
@@ -32,7 +31,7 @@ It contains:
 All views are conditionally rendered (no routing) for a smooth and seamless user experience.
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Tool | Description |
 |------|-------------|
@@ -45,7 +44,7 @@ All views are conditionally rendered (no routing) for a smooth and seamless user
 | [GitHub](https://github.com/) | Version control & CI |
 
 
-## ✨ Features
+## Features
 
 - Smooth section transitions via Framer Motion
 - Fully responsive design
@@ -54,23 +53,6 @@ All views are conditionally rendered (no routing) for a smooth and seamless user
 - Custom domain integration
 - Feature-based Git workflow
 
-
-## 🗂️ Project Structure
-
-src/
-│
-├── assets/          # Images and static assets
-├── components/      # Reusable UI components
-├── context/         # React context providers
-├── types/           # TypeScript type definitions
-├── utils/           # Helper functions
-├── App.tsx          # Entry point
-├── main.tsx         # Vite bootstrap
-└── index.css        # Tailwind base
-
-
-
-##  Development
 
 ### Clone the Repo
 
