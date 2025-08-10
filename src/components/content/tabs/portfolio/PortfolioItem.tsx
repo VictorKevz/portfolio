@@ -12,7 +12,7 @@ export const PortfolioItem = ({ data }: PortfolioItemProps) => {
       keyValue={data.category}
       scale={0.9}
     >
-      <article className="group relative w-full overflow-hidden rounded-2xl shadow-2xl cursor-pointer transition-all ease-in-out duration-300 border border-[var(--border)] hover:shadow-blue-400/10 hover:-translate-0.5 hover:border-[var(--primary-color)]">
+      <article className="group relative w-full h-full flex flex-col justify-between overflow-hidden rounded-2xl shadow-2xl cursor-pointer transition-all ease-in-out duration-300 border border-[var(--border)] hover:shadow-blue-400/10 hover:-translate-0.5">
         <header className="p-2.5 overflow-hidden">
           <div
             className="w-full min-h-[250px] rounded-xl bg-center bg-cover group-hover:scale-110 transition-transform duration-400 ease-in-out"
@@ -22,12 +22,12 @@ export const PortfolioItem = ({ data }: PortfolioItemProps) => {
             }}
           ></div>
         </header>
-        <div className="w-full my-4 px-4 pb-4 border-b border-[var(--border)]">
+        <div className="w-full my-4 px-4 pb-4">
           <h3 className="text-xl">{data.title}</h3>
           <p className="text-[.8rem]">{data.description}</p>
         </div>
 
-        <footer className="relative flex w-full px-4 pb-4 items-center justify-between cursor-pointer transition-all ease-in-out duration-300">
+        <footer className=" flex w-full h-[5rem] items-center justify-between px-4 cursor-pointer border-t border-[var(--border)]">
           <div className="flex gap-2">
             <a
               href={data.liveUrl}
@@ -48,8 +48,8 @@ export const PortfolioItem = ({ data }: PortfolioItemProps) => {
               <GitHub className="text-[var(--neutral-900)] hover:text-white" />
             </a>
           </div>
-          <span className="bg-[var(--border)] w-px absolute -top-4 bottom-0 left-[50%]"></span>
-          <ul className="flex items-center mt-2.5">
+          <span className="bg-[var(--border)] w-px h-full"></span>
+          <ul className="flex items-center">
             {data.tools.map((tool, index) => (
               <li
                 key={index}

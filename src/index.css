@@ -5,7 +5,7 @@
   --neutral-100: #edf3f6;
   --neutral-200: #dededc;
   --neutral-300: #f0f4f5;
-  --neutral-400: #606162; /* for small text */
+  --neutral-400: #606162;
   --neutral-800: #333334;
 
   --neutral-900: #1e1e1f;
@@ -37,14 +37,53 @@
   --border: #343434;
   --red-100: #e77e7e;
 
-  /* --primary-color: #fdcd67; */
-
-  /* --primary-color: #af3cf6; */
   --gradient: linear-gradient(to right, #161616, #1c1f24fe);
   --faded-gradient: linear-gradient(to top, #070708fa, #487cd772);
   --toggle-gradient: linear-gradient(to right, #070708fa, #2b6bdac7);
   --main-bg: url("/dark-main-bg1.png");
 }
+
+/* ................NEW PALLETTE......... */
+/* :root {
+  --neutral-0: #ffffff;
+  --neutral-100: #f8f9fa;
+  --neutral-200: #e6e8eb;
+  --neutral-300: #d0d4d9;
+  --neutral-400: #5a5c5e;
+  --neutral-800: #222;
+  --neutral-900: #111;
+
+  --primary-color: #ffd84d;
+  --secondary-color: #0cc0df;
+  --accent-100: #875ddb;
+  --accent-200: #5ce1e6;
+
+  --error: #c74c4c;
+  --success: #25c578;
+
+  --gradient-primary: linear-gradient(to right, #ffd84d, #0cc0df);
+  --gradient-accent: linear-gradient(to right, #875ddb, #5ce1e6);
+}
+.dark {
+  --neutral-0: #0c0c0c;
+  --neutral-100: #333339;
+  --neutral-200: #2b2b2c;
+  --neutral-300: #1f1f20;
+  --neutral-400: #8c8f90;
+  --neutral-800: #d6d6dad0;
+  --neutral-900: #fcf8f8ea;
+
+  --primary-color: #ffd84d;
+  --secondary-color: #0cc0df;
+  --accent-100: #875ddb;
+  --accent-200: #5ce1e6;
+
+  --error: #c74c4c;
+  --success: #25c578;
+
+  --gradient-primary: linear-gradient(to right, #0cc0df, #ffd84d);
+  --gradient-accent: linear-gradient(to right, #875ddb, #5ce1e6);
+} */
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
