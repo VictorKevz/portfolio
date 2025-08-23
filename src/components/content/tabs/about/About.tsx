@@ -1,3 +1,4 @@
+import { HighlightedText } from "../../../HighlightedText";
 import { Skills } from "../career/Skills";
 import { servicesData } from "./AboutData";
 // import { Hobbies } from "./Hobbies";
@@ -7,25 +8,19 @@ export const About = () => {
     <div className="w-full px-6 mt-8">
       <header className="w-full flex flex-col items-start gap-3">
         <p className="text-sm sm:text-base">
-          Hi, I’m a{" "}
-          <strong className="text-[var(--primary-color)]">
-            front-end web developer
-          </strong>{" "}
-          with an information systems background, passionate about creating
+          Hi, I’m a <HighlightedText text="front-end web developer" /> with an
+          information systems background, passionate about creating
           user-centered web solutions that feel intuitive and look great. I love
-          bridging the gap between{" "}
-          <strong className="text-[var(--primary-color)]">UX/UI design</strong>{" "}
-          and development, crafting clean, reliable code to bring seamless
-          experiences to life.
+          bridging the gap between <br />
+          <HighlightedText text="User-Experience" /> and development, crafting
+          clean, reliable code to bring seamless experiences to life.
         </p>
         <p className="text-sm sm:text-base">
           I’m genuinely curious about{" "}
-          <strong className="text-[var(--primary-color)]">
-            software product management
-          </strong>{" "}
-          and always eager to learn, tackling new challenges to grow my skills.
-          Every project is an opportunity to build something meaningful, respect
-          the user’s needs, and help clients achieve their vision.
+          <HighlightedText text="software product management" /> and always
+          eager to learn, tackling new challenges to grow my skills. Every
+          project is an opportunity to build something meaningful, respect the
+          user’s needs, and help clients achieve their vision.
         </p>
       </header>
       <div className="w-full flex flex-col items-start mt-12 py-6 border-t border-[var(--border)]">
@@ -34,14 +29,17 @@ export const About = () => {
           {servicesData.map((card) => (
             <div
               key={card.id}
-              className="w-full flex flex-col items-center sm:flex-row sm:items-start gap-3 bg-[var(--neutral-300)] rounded-lg px-4 py-5 border-t border-[var(--border)] shadow-lg"
+              className={`pt-px rounded-t-lg rounded-b-xl w-full`}
+              style={{ backgroundColor: `var(${card.color})` }}
             >
-              <figure className="rounded-xl bg-[var(--neutral-0)] p-2 flex items-center justify-center shadow-sm shadow-blue-400/20">
-                <img src={card.icon} alt="" className="min-w-8 w-9" />
-              </figure>
-              <div className="flex flex-col items-center text-center sm:text-left sm:items-start gap-2">
-                <h4 className="text-sm sm:text-xl">{card.title}</h4>
-                <p className="text-sm sm:text-base">{card.description}</p>
+              <div className="w-full h-full flex flex-col items-center sm:flex-row sm:items-start gap-3 bg-[var(--neutral-300)] rounded-lg px-4 py-5 shadow-lg">
+                <figure className="rounded-xl bg-[var(--neutral-0)] p-2 flex items-center justify-center shadow-sm shadow-blue-400/20">
+                  <img src={card.icon} alt="" className="min-w-8 w-9" />
+                </figure>
+                <div className="flex flex-col items-center text-center sm:text-left sm:items-start gap-2">
+                  <h4 className="text-sm sm:text-xl">{card.title}</h4>
+                  <p className="text-sm sm:text-base">{card.description}</p>
+                </div>
               </div>
             </div>
           ))}

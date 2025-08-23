@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 :root {
-  --neutral-0: #fff;
+  --neutral-0: #1e1e1f;
   --neutral-100: #edf3f6;
   --neutral-200: #dededc;
   --neutral-300: #f0f4f5;
@@ -10,14 +10,25 @@
 
   --neutral-900: #1e1e1f;
   --neutral-1000: #000;
-  --border: #e4f1ff;
+  /* Overlay colors */
+  --bg-overlay: #ffffffad; /* Main background */
+  --container-overlay: #ffffff; /* Profile card and Main Container */
+
+  --border: #edede6;
   --red-100: #df5a5a;
 
-  --primary-color: #2f4ebd;
+  --primary-color: #c8a418;
+  --primary-gradient-left: #0c9fb9;
+  --primary-gradient-right: #e4bf2a;
+  --accent-gradient-left: #8c52ff;
+  --accent-gradient-right: #5ce1e6;
+
   --secondary-color: #6193ea;
 
-  --gradient: linear-gradient(to top, #fff, #ebf3fc);
-  --main-bg: url("/light-main-bg2.png");
+  --gradient-primary: linear-gradient(to right, #0cc0df, #ffde59);
+  --gradient-accent: linear-gradient(to right, #8c52ff, #5ce1e6);
+
+  --main-bg: url("/main-bg/desktop-light-bg.webp");
   --faded-gradient: linear-gradient(to top, #f2f0f0, #487cd772);
   --toggle-gradient: linear-gradient(to bottom, #ffffffc2, #2b6bda);
 }
@@ -32,58 +43,28 @@
   --neutral-900: #fcf8f8ea;
   --neutral-1000: #fff;
 
-  --primary-color: #2b6bda;
+  /* Overlay colors */
+  --bg-overlay: #0e0d0dc7;
+  --container-overlay: #0e0d0dc7; /* Profile card and Main Container */
+
+  --primary-color: #ffd84d;
+  --primary-gradient-left: #0cc0df;
+  --primary-gradient-right: #ffde59;
+
+  --accent-gradient-left: #875ddb;
+  --accent-gradient-right: #5ce1e6;
 
   --border: #343434;
   --red-100: #e77e7e;
 
-  --gradient: linear-gradient(to right, #161616, #1c1f24fe);
-  --faded-gradient: linear-gradient(to top, #070708fa, #487cd772);
-  --toggle-gradient: linear-gradient(to right, #070708fa, #2b6bdac7);
-  --main-bg: url("/dark-main-bg1.png");
-}
-
-/* ................NEW PALLETTE......... */
-/* :root {
-  --neutral-0: #ffffff;
-  --neutral-100: #f8f9fa;
-  --neutral-200: #e6e8eb;
-  --neutral-300: #d0d4d9;
-  --neutral-400: #5a5c5e;
-  --neutral-800: #222;
-  --neutral-900: #111;
-
-  --primary-color: #ffd84d;
-  --secondary-color: #0cc0df;
-  --accent-100: #875ddb;
-  --accent-200: #5ce1e6;
-
-  --error: #c74c4c;
-  --success: #25c578;
-
-  --gradient-primary: linear-gradient(to right, #ffd84d, #0cc0df);
-  --gradient-accent: linear-gradient(to right, #875ddb, #5ce1e6);
-}
-.dark {
-  --neutral-0: #0c0c0c;
-  --neutral-100: #333339;
-  --neutral-200: #2b2b2c;
-  --neutral-300: #1f1f20;
-  --neutral-400: #8c8f90;
-  --neutral-800: #d6d6dad0;
-  --neutral-900: #fcf8f8ea;
-
-  --primary-color: #ffd84d;
-  --secondary-color: #0cc0df;
-  --accent-100: #875ddb;
-  --accent-200: #5ce1e6;
-
-  --error: #c74c4c;
-  --success: #25c578;
-
   --gradient-primary: linear-gradient(to right, #0cc0df, #ffd84d);
   --gradient-accent: linear-gradient(to right, #875ddb, #5ce1e6);
-} */
+
+  --faded-gradient: linear-gradient(to top, #070708fa, #487cd772);
+  --toggle-gradient: linear-gradient(to right, #070708fa, #2b6bdac7);
+  --main-bg: url("/main-bg/desktop-dark-bg.webp");
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -116,7 +97,9 @@
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
 }
-
+body {
+  background-color: var(--neutral-0);
+}
 h1,
 h2,
 h3,
@@ -151,7 +134,43 @@ input:focus,
 textarea:focus {
   border: 1px solid var(--primary-color);
 }
-.socialIcons:hover {
-  transform: scale(1.3) translateY(-3px);
+
+.glass-container {
+  backdrop-filter: blur(2.5rem);
+  background-color: var(--container-overlay);
+  border: 1px solid var(--border);
+}
+.active-link {
+  background: var(--gradient-primary);
+  border-radius: 2rem;
+  padding: 0 1.5rem;
+  height: 2.5rem;
   transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+.link:hover {
+  background: var(--gradient-primary);
+  border-radius: 2rem;
+  padding: 0 1.5rem;
+  height: 2.5rem;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  color: var(--neutral-0);
+}
+.primary-gradient-bg {
+  background: var(--gradient-primary);
+}
+.primary-gradient-bg:hover {
+  background: var(--gradient-accent);
+}
+.accent-gradient {
+  background: var(--gradient-accent);
+  padding: 1px;
+  opacity: 0.95;
+  transition: all 0.3s ease-in-out;
+}
+.accent-gradient:hover {
+  transition: all 0.3s ease-in-out;
+  background: var(--gradient-primary);
+  cursor: pointer;
 }

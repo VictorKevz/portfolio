@@ -50,17 +50,19 @@ export const ContentContainer = () => {
       initial="hidden"
       animate="visible"
       ref={sectionRef}
-      className="relative max-w-screen-lg w-full h-auto bg-[var(--neutral-0)] border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:min-h-[44rem] overflow-y-auto no-scrollbar"
+      className="relative glass-container max-w-screen-xl w-full h-auto glass-container border border-[var(--border)] rounded-3xl pb-6 shadow-xl xl:min-h-[44rem] overflow-y-auto no-scrollbar"
     >
       <header className="flex w-full justify-between items-start pl-6">
         <h2 className="text-3xl sm:text-4xl  text-[var(--neutral-900)] flex flex-col items-start min-w-max gap-2 mt-9">
           {tabTitle[activeTab]}
-          <span className="w-12 h-1.5 bg-[var(--secondary-color)] rounded-full"></span>
+          <span className="w-12 h-1.5 primary-gradient-bg rounded-full"></span>
         </h2>
-        <div className="hidden lg:flex w-full justify-end static">
-          <nav className="max-w-xl w-full min-h-17 flex items-center bg-[var(--neutral-300)] rounded-bl-3xl rounded-tr-[1.43rem] px-10 border-b border-l border-[var(--border)]">
-            <NavTabs />
-          </nav>
+        <div className="hidden lg:flex w-full justify-end ">
+          <div className="max-w-xl w-full accent-gradient pb-px pl-px rounded-bl-3xl rounded-tr-[1.43rem]">
+            <nav className="w-full min-h-17 flex items-center bg-[var(--neutral-300)] rounded-bl-3xl rounded-tr-[1.43rem] px-10 border-b border-l border-[var(--border)]">
+              <NavTabs />
+            </nav>
+          </div>
         </div>
       </header>
       <AnimationWrapper

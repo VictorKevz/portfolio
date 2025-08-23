@@ -14,8 +14,8 @@ function App() {
     <ThemeProvider>
       <AlertProvider>
         <main
-          className="w-full min-h-dvh bg-[var(--neutral-0)] flex flex-col items-center justify-center gap-4 relative"
-          // style={{ backgroundImage: "var(--main-bg)" }}
+          className="w-full min-h-dvh bg-cover flex flex-col items-center justify-center gap-4 relative z-10"
+          style={{ backgroundImage: "var(--main-bg)" }}
         >
           <NavTabsProvider>
             <motion.div
@@ -29,6 +29,7 @@ function App() {
           </NavTabsProvider>
           <AlertWrapper />
           <ThemeButton />
+          <div className="w-full bg-[var(--bg-overlay)] h-full absolute -z-2 "></div>
         </main>
       </AlertProvider>
     </ThemeProvider>

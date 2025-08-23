@@ -16,6 +16,7 @@ export const servicesData = [
     description:
       "Tailored websites built from scratch for performance, responsiveness, and business impact.",
     icon: webDev,
+    color: "--primary-gradient-left",
   },
   {
     id: "wordpress",
@@ -23,6 +24,7 @@ export const servicesData = [
     description:
       "Flexible, fast, and scalable sites using WordPress and modern visual builders.",
     icon: wordpress,
+    color: "--primary-gradient-right",
   },
   {
     id: "content-creation",
@@ -30,6 +32,7 @@ export const servicesData = [
     description:
       "Branded social media graphics and short-form videos that boost online engagement.",
     icon: content,
+    color: "--accent-gradient-left",
   },
   {
     id: "maintenance",
@@ -37,6 +40,7 @@ export const servicesData = [
     description:
       "Routine updates, speed improvements, and security checks to keep sites running smoothly.",
     icon: support,
+    color: "--accent-gradient-right",
   },
 ];
 

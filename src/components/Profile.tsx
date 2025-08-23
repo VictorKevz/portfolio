@@ -10,9 +10,10 @@ import {
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 
-import profilePic from "../assets/images/profile.png";
+import profilePic from "../assets/images/profile-pic.png";
 import { useState } from "react";
 import { ContainerVariants } from "../animations/animations";
+import { HighlightedText } from "./HighlightedText";
 
 const Profile = () => {
   const [showContacts, setShowContacts] = useState<boolean>(false);
@@ -27,20 +28,22 @@ const Profile = () => {
       variants={ContainerVariants(-100)}
       initial="hidden"
       animate="visible"
-      className="max-w-screen-lg xl:max-w-72 w-full sticky top-10 bg-[var(--neutral-0)] flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg"
+      className="glass-container max-w-screen-lg xl:max-w-72 w-full sticky top-10 flex flex-col items-start gap-4 px-4 pt-8 border border-[var(--border)] rounded-3xl shadow-lg"
     >
       <header className="w-full flex items-center gap-4 xl:flex-col pb-3">
         <div
-          className="min-h-20 w-20 sm:w-40 sm:min-h-40 lg:w-35 xl:min-h-35 bg-cover px-1.5 rounded-2xl bg-[var(--neutral-300)] flex items-center justify-center shadow-lg"
+          className="min-h-20 w-20 sm:w-40 sm:min-h-40 lg:w-30 xl:min-h-30 bg-cover px-1.5 rounded-2xl flex items-center justify-center shadow-lg opacity-90"
           style={{ backgroundImage: `url(${profilePic})` }}
         ></div>
         <div className="flex flex-col items-start gap-2 xl:items-center">
-          <h1 className="text-lg sm:text-4xl xl:text-2xl text-[var(--neutral-900)] font-bold">
-            Victor Kuwandira
+          <h1 className="text-lg sm:text-4xl xl:text-xl text-[var(--neutral-900)] font-bold uppercase">
+            <HighlightedText text="Victor Kuwandira" />
           </h1>
-          <span className="bg-[var(--neutral-300)] text-sm h-8 flex items-center justify-center text-[var(--neutral-900)] px-2 rounded-xl">
-            Web Developer
-          </span>
+          <div className="accent-gradient rounded-full">
+            <span className="bg-[var(--neutral-300)] text-sm h-8 flex items-center justify-center text-[var(--neutral-900)] px-3 rounded-full">
+              Web Developer
+            </span>
+          </div>
         </div>
       </header>
 
@@ -52,9 +55,11 @@ const Profile = () => {
         <ul className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-5 py-8 mt-3 border-t border-[var(--border)]">
           {contactData.map((item) => (
             <li key={item.id} className="flex items-center gap-4 w-full">
-              <span className="flex items-center justify-center h-12 w-12 bg-[var(--neutral-300)] border border-[var(--border)] rounded-xl text-[var(--primary-color)] shadow-lg">
-                <item.icon />
-              </span>
+              <div className="accent-gradient rounded-xl">
+                <span className="flex items-center justify-center h-12 w-12 bg-[var(--neutral-300)] border border-[var(--border)] rounded-xl text-[var(--primary-color)] shadow-lg">
+                  <item.icon />
+                </span>
+              </div>
               <p className="flex flex-col text-[var(--neutral-900)] font-normal text-sm">
                 <span className="uppercase text-xs text-[var(--neutral-400)] font-bold">
                   {item.label}
@@ -69,11 +74,12 @@ const Profile = () => {
             <li key={link.id}>
               <a
                 href={link.url}
-                target={`${link.id === "website" ? "_self" : "_blank"}`}
+                target="_blank"
+                className="primary-gradient-bg h-8 w-8 rounded-lg hover:-translate-y-1 hover:scale-105"
               >
                 <link.icon
                   fontSize="medium"
-                  className="socialIcons text-[var(--neutral-400)]  hover:cursor-pointer hover:text-[var(--primary-color)] hover:-translate-y-1 hover:scale-125"
+                  className="text-[var(--neutral-0)]  hover:cursor-pointer"
                 />
               </a>
             </li>
@@ -140,5 +146,5 @@ const socialLinksData = [
     icon: LinkedIn,
     url: "https://www.linkedin.com/in/victor-kuwandira/",
   },
-  { id: "website", icon: Language, url: "https://www.victorkevz.com" },
+  { id: "website", icon: Language, url: "https://chatbot.victorkevz.com" },
 ];

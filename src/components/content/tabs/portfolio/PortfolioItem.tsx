@@ -32,21 +32,27 @@ export const PortfolioItem = ({ data }: PortfolioItemProps) => {
             <a
               href={data.liveUrl}
               target="_blank"
-              className="h-10 text-sm sm:text-base rounded-xl px-2 bg-[var(--primary-color)] text-white shadow-blue-400/50 shadow-2xl border border-transparent hover:bg-transparent hover:border-[var(--primary-color)] hover:text-[var(--neutral-900)] hover:scale-105 hover:-translate-0.5 transition-all ease-in-out duration-300"
+              className="primary-gradient-bg h-10 w-10 text-sm sm:text-base rounded-lg text-[var(--neutral-0)] shadow-blue-400/50 shadow-2xl"
             >
               <Language />
             </a>
-            <a
-              href={data.githubUrl}
-              target={isEmpty ? "_self" : "_blank"}
-              onClick={(e) => {
-                if (isEmpty) e.preventDefault();
-              }}
-              className={`h-10 text-sm sm:text-base rounded-xl px-2 bg-transparent border border-[var(--primary-color)] text-[var(--neutral-0)] shadow-blue-400/50 shadow-2xl hover:bg-[var(--primary-color)] hover:border-transparent hover:scale-105 hover:-translate-0.5 transition-all ease-in-out duration-300
-                ${isEmpty && "cursor-not-allowed opacity-50"}`}
+            <span
+              className={`accent-gradient p-px rounded-lg hover:scale-105 hover:-translate-0.5 ${
+                isEmpty && "!cursor-not-allowed opacity-20"
+              }`}
             >
-              <GitHub className="text-[var(--neutral-900)] hover:text-white" />
-            </a>
+              <a
+                href={data.githubUrl}
+                target={isEmpty ? "_self" : "_blank"}
+                onClick={(e) => {
+                  if (isEmpty) e.preventDefault();
+                }}
+                className={`h-10 w-10 text-sm sm:text-base rounded-lg bg-[var(--neutral-300)] text-[var(--neutral-0)] shadow-blue-400/50 shadow-2xl  transition-all ease-in-out duration-300
+                ${isEmpty && "!cursor-not-allowed opacity-20"}`}
+              >
+                <GitHub className="text-[var(--neutral-900)] hover:text-white" />
+              </a>
+            </span>
           </div>
           <span className="bg-[var(--border)] w-px h-full"></span>
           <ul className="flex items-center">

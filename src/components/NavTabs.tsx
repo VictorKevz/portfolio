@@ -13,9 +13,9 @@ export const NavTabs = () => {
           <li key={tab.id}>
             <button
               type="button"
-              className={`justify-center font-medium text-xs sm:text-lg ${
+              className={`justify-center font-medium text-xs sm:text-lg link ${
                 isActive
-                  ? "text-[var(--secondary-color)]"
+                  ? "text-[var(--neutral-0)] active-link hover:bg-gradient-to-r! hover:from-[#875ddb] hover:to-[#5ce1e6]"
                   : "text-[var(--neutral-900)]"
               }`}
               onClick={() => onUpdate(tab.id)}
@@ -31,7 +31,7 @@ export const NavTabs = () => {
 
 const navTabsData: navTabsDataType[] = [
   { id: "about", text: "About" },
-  { id: "career", text: "Career" },
   { id: "portfolio", text: "Portfolio" },
+  { id: "career", text: "Career" },
   { id: "contact", text: "Contact" },
 ];
