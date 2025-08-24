@@ -50,7 +50,7 @@ export const PortfolioItem = ({ data }: PortfolioItemProps) => {
                 className={`h-10 w-10 text-sm sm:text-base rounded-lg bg-[var(--neutral-300)] text-[var(--neutral-0)] shadow-blue-400/50 shadow-2xl  transition-all ease-in-out duration-300
                 ${isEmpty && "!cursor-not-allowed opacity-20"}`}
               >
-                <GitHub className="text-[var(--neutral-900)] hover:text-white" />
+                <GitHub className="text-[var(--neutral-900)]" />
               </a>
             </span>
           </div>

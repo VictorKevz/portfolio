@@ -26,10 +26,10 @@ export const Portfolio = () => {
               key={item}
               type="button"
               onClick={() => setActiveTab(item)}
-              className={`font-bold h-8 sm:h-11 sm:max-w-[12rem] w-full px-2 sm:px-4 rounded-t-xl hover:bg-gradient-to-r hover:from-[var(--primary-gradient-left)] to-[var(--primary-gradient-right)] ${
+              className={`font-bold h-8 sm:h-11 sm:max-w-[12rem] w-full px-2 sm:px-4 rounded-t-xl hover:bg-gradient-to-r hover:from-[var(--primary-gradient-left)] to-[var(--primary-gradient-right)] hover:text-[var(--neutral-0)] ${
                 isActive
                   ? "text-[var(--neutral-0)] primary-gradient-bg"
-                  : "text-[var(--neutral-900)] bg-[var(--neutral-300)]"
+                  : "text-[var(--neutral-900)] bg-[var(--neutral-200)] border border-[var(--border)]"
               }`}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}

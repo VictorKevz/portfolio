@@ -91,8 +91,7 @@ const Profile = () => {
         <button
           type="button"
           onClick={() => setShowContacts(!showContacts)}
-          className="absolute z-10 top-0 right-0 bg-[var(--neutral-300)] border-b border-l border-[var(--border)] text-[var(--neutral-1000)] text-sm px-4 py-px sm:p-2 rounded-bl-xl  rounded-tr-[1.43rem] font-bold"
-          style={{ background: `var(--toggle-gradient)` }}
+          className="absolute z-10 top-0 right-0 accent-gradient  text-[var(--neutral-0)] font-extrabold text-sm px-4! py-px sm:p-2! rounded-bl-xl  rounded-tr-[1.43rem]"
         >
           <span className="sm:hidden">
             {showContacts ? (

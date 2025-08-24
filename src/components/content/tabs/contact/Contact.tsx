@@ -142,7 +142,7 @@ export const Contact = () => {
           <div className="w-full flex justify-end mt-4">
             <button
               type="submit"
-              className="h-12 w-fit shadow-2xl rounded-xl bg-[var(--primary-color)] text-white px-4 gap-2"
+              className="h-12 w-fit shadow-2xl rounded-xl primary-gradient-bg text-[var(--neutral-0)] px-4 gap-2"
             >
               <Send className="-rotate-45" /> Send Message
             </button>

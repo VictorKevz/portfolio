@@ -20,10 +20,10 @@ export const Career = () => {
             <button
               type="button"
               key={tab.id}
-              className={`relative h-9 sm:h-11 min-w-max max-w-50 w-full gap-1 px-2 sm:px-4 rounded-t-xl bg-[var(--neutral-300)] font-medium text-base ${
+              className={`relative h-9 sm:h-11 min-w-max max-w-50 w-full gap-1 px-2 sm:px-4 rounded-t-xl bg-[var(--neutral-300)] font-medium text-base hover:bg-gradient-to-r hover:from-[var(--primary-gradient-left)] to-[var(--primary-gradient-right)] hover:text-[var(--neutral-0)] ${
                 isActive
-                  ? "text-white bg-[var(--primary-color)]"
-                  : "text-[var(--neutral-900)]"
+                  ? "text-[var(--neutral-0)] primary-gradient-bg"
+                  : "text-[var(--neutral-900)] bg-[var(--neutral-200)] border border-[var(--border)]"
               }`}
               onClick={() => setActiveTab(tab.id)}
             >
