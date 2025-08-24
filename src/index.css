@@ -134,7 +134,10 @@ input:focus,
 textarea:focus {
   border: 1px solid var(--primary-color);
 }
-
+::selection {
+  background: var(--gradient-primary);
+  color: var(--primary-color);
+}
 .glass-container {
   backdrop-filter: blur(1.5rem);
   background-color: var(--container-overlay);

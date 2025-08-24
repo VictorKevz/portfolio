@@ -6,17 +6,14 @@ import Profile from "./components/Profile";
 import ThemeButton from "./components/ThemeButton";
 import { AlertProvider } from "./context/AlertContext";
 import { NavTabsProvider } from "./context/NavTabsContext";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import { motion } from "framer-motion";
 
 function App() {
   return (
     <ThemeProvider>
       <AlertProvider>
-        <main
-          className="w-full min-h-dvh bg-cover flex flex-col items-center justify-center gap-4 relative z-10"
-          style={{ backgroundImage: "var(--main-bg)" }}
-        >
+        <main className="w-full min-h-dvh  flex flex-col items-center justify-center gap-4 relative z-10">
           <NavTabsProvider>
             <motion.div
               layout
@@ -29,6 +26,7 @@ function App() {
           </NavTabsProvider>
           <AlertWrapper />
           <ThemeButton />
+          <MainBackground />
           <div className="w-full bg-[var(--bg-overlay)] h-full absolute -z-2 "></div>
         </main>
       </AlertProvider>
@@ -43,5 +41,20 @@ const MobileNavTabs = () => {
     <nav className="lg:hidden fixed bottom-0 w-full bg-[var(--neutral-100)] min-h-14 flex items-center px-4 border-t border-[var(--border)] rounded-t-3xl shadow-2xl">
       <NavTabs />
     </nav>
+  );
+};
+
+const MainBackground = () => {
+  const { theme } = useTheme();
+  const bgImage = {
+    desktop: `/main-bg/desktop-${theme}-bg.webp`,
+    mobile: `/main-bg/mobile-${theme}-bg.webp`,
+  };
+  return (
+    <picture className="w-full h-full absolute pointer-events-none -z-10">
+      <source media="(min-width:800px )" srcSet={bgImage.desktop} />
+      <source media="(max-width:799px )" srcSet={bgImage.mobile} />
+      <img src={bgImage.mobile} className="w-full h-full object-cover" />
+    </picture>
   );
 };
