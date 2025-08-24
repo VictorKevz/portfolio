@@ -1,46 +1,46 @@
-import webDev from "../../../../assets/images/webDev.png";
-import content from "../../../../assets/images/content.png";
-import support from "../../../../assets/images/support.png";
-import wordpress from "../../../../assets/images/wordpress.png";
 import {
+  ConnectWithoutContactOutlined,
+  DashboardCustomize,
   FitnessCenter,
   LibraryMusicOutlined,
   Podcasts,
+  SmartToy,
   SportsSoccer,
+  Storefront,
 } from "@mui/icons-material";
 
 export const servicesData = [
   {
-    id: "custom-dev",
-    title: "Custom Web Development",
+    id: 1,
+    icon: Storefront,
+    title: "Marketing Websites",
     description:
-      "Tailored websites built from scratch for performance, responsiveness, and business impact.",
-    icon: webDev,
-    color: "--primary-gradient-left",
+      "Helping you create websites that convert visitors into customers, track user behavior, and increase bookings or sales.",
+    color: "primary-gradient-left",
   },
   {
-    id: "wordpress",
-    title: "WordPress Development",
+    id: 2,
+    icon: DashboardCustomize,
+    title: "Dynamic Web Apps",
     description:
-      "Flexible, fast, and scalable sites using WordPress and modern visual builders.",
-    icon: wordpress,
-    color: "--primary-gradient-right",
+      "Delivering interactive apps and dashboards that turn your data into actionable insights for smarter business decisions.",
+    color: "accent-gradient-left",
   },
   {
-    id: "content-creation",
+    id: 3,
+    icon: SmartToy,
+    title: "AI-Powered Chatbots",
+    description:
+      "Assisting you in engaging customers and automating support with intelligent conversational tools that save time and improve satisfaction.",
+    color: "primary-gradient-right",
+  },
+  {
+    id: 4,
+    icon: ConnectWithoutContactOutlined,
     title: "Content Creation",
     description:
-      "Branded social media graphics and short-form videos that boost online engagement.",
-    icon: content,
-    color: "--accent-gradient-left",
-  },
-  {
-    id: "maintenance",
-    title: "Website Maintenance",
-    description:
-      "Routine updates, speed improvements, and security checks to keep sites running smoothly.",
-    icon: support,
-    color: "--accent-gradient-right",
+      "Helping you capture your audience’s attention with high-quality visuals and media that grow your brand and drive conversions.",
+    color: "accent-gradient-right",
   },
 ];
 

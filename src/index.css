@@ -11,10 +11,10 @@
   --neutral-900: #1e1e1f;
   --neutral-1000: #000;
   /* Overlay colors */
-  --bg-overlay: #ffffffad; /* Main background */
-  --container-overlay: #ffffff; /* Profile card and Main Container */
+  --bg-overlay: #ffffffa6; /* Main background */
+  --container-overlay: #ffffff32; /* Profile card and Main Container */
 
-  --border: #edede6;
+  --border: #d9d9d2;
   --red-100: #df5a5a;
 
   --primary-color: #c8a418;
@@ -44,8 +44,8 @@
   --neutral-1000: #fff;
 
   /* Overlay colors */
-  --bg-overlay: #0e0d0dc7;
-  --container-overlay: #0e0d0dc7; /* Profile card and Main Container */
+  --bg-overlay: #0e0d0d89;
+  --container-overlay: #0e0d0d29; /* Profile card and Main Container */
 
   --primary-color: #ffd84d;
   --primary-gradient-left: #0cc0df;
@@ -136,7 +136,7 @@ textarea:focus {
 }
 
 .glass-container {
-  backdrop-filter: blur(2.5rem);
+  backdrop-filter: blur(1.5rem);
   background-color: var(--container-overlay);
   border: 1px solid var(--border);
 }
