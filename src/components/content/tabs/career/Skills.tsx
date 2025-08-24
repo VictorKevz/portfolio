@@ -59,7 +59,7 @@ const ScrollingRow = ({ items, direction, speed }: ScrollingRowProps) => {
         {duplicatedItems.map((item, index) => (
           <li
             key={`${item.name}-${index}`}
-            className="accent-gradient rounded-lg filter opacity-70 group-hover:opacity-100"
+            className="accent-gradient rounded-lg filter opacity-60! group-hover:opacity-100"
           >
             <span className="scale-70 sm:scale-80 md:scale-90 lg:scale-100 group min-w-max h-12 px-2 rounded-lg bg-[var(--neutral-100)] flex items-center justify-center text-[var(--neutral-900)]  transition-all duration-300 ease-in-out cursor-pointer">
               {item.icon ? (
