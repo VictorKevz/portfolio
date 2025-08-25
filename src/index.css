@@ -149,7 +149,7 @@ textarea:focus {
   background: var(--gradient-primary);
   border-radius: 2rem;
   padding: 0 1.5rem;
-  height: 2.5rem;
+  height: 2rem;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
 }
@@ -157,7 +157,7 @@ textarea:focus {
   background: var(--gradient-primary);
   border-radius: 2rem;
   padding: 0 1.5rem;
-  height: 2.5rem;
+  height: 2rem;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
   color: var(--neutral-0);

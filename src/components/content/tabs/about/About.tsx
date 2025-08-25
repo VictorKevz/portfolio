@@ -25,7 +25,7 @@ export const About = () => {
         </p>
       </header>
       <div className="w-full flex flex-col items-start mt-12 py-6 border-t border-[var(--border)]">
-        <h3 className="text-3xl">Helping You Succeed Online</h3>
+        <h3 className="text-lg sm:text-3xl">Helping You Succeed Online</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           {servicesData.map((card) => (
             <div
