@@ -30,8 +30,8 @@ export const portfolioData: PortfolioItem[] = [
     description:
       "An intelligent web chat showcasing Victor’s portfolio, enabling real-time AI interaction via text or voice, fast, simple, and accessible.",
     category: "personal",
-    liveUrl: "https://victorkevz.github.io/chat-bot/",
-    githubUrl: "https://chatbot.victorkevz.com",
+    liveUrl: "https://chatbot.victorkevz.com/",
+    githubUrl: "https://github.com/VictorKevz/chat-bot",
     tools: [
       "./icons/react.svg",
       "./icons/framer-motion.svg",

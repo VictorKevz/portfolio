@@ -7,10 +7,14 @@ export const NavTabsContext = createContext<NavTabsContextType | undefined>(
 );
 
 export const NavTabsProvider = ({ children }: ProviderProps) => {
-  const [activeTab, setActiveTab] = useState<tabKey>("about");
+  const [activeTab, setActiveTab] = useState<tabKey>(() => {
+    const saved = localStorage.getItem("tabs");
+    return saved !== null ? JSON.parse(saved) : "about";
+  });
 
   const updateActiveTab = useCallback((key: tabKey) => {
     setActiveTab(key);
+    localStorage.setItem("tabs", JSON.stringify(key));
   }, []);
   return (
     <NavTabsContext.Provider value={{ activeTab, onUpdate: updateActiveTab }}>
