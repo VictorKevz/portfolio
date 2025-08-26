@@ -1,10 +1,10 @@
 # Victor's Portfolio 
 
-Welcome to my official web development portfolio — a reflection of my skills, design taste, and ability to build clean, modern user interfaces using cutting-edge frontend technologies.
-
+Welcome to my official web development portfolio, a reflection of my skills, design taste, and ability to build clean, modern user interfaces using frontend technologies.
+![Victor's website portfolio](public/screenshots/main.webp)
 ## Live Site
 
-👉 [https://victorkevz.com](https://victorkevz.com)
+[https://victorkevz.com](https://victorkevz.com)
 
 
 ##  Table of Contents
@@ -13,6 +13,7 @@ Welcome to my official web development portfolio — a reflection of my skills, 
 - [Tech Stack](#-tech-stack)
 - [Features](#-features)
 - [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
 - [Deployment](#-deployment)
 - [Credits](#-credits)
 - [License](#-license)
@@ -54,20 +55,37 @@ All views are conditionally rendered (no routing) for a smooth and seamless user
 - Feature-based Git workflow
 
 
+## Getting Started
+
 ### Clone the Repo
 
 ```bash
 git clone git@github.com:VictorKevz/portfolio.git
-cd your-portfolio
+cd portfolio
+```
 
-Install Dependencies
+### Install Dependencies
 
+```bash
 npm install
+```
 
-Run Locally
+### Run Locally
 
+```bash
 npm run dev
+```
 
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
 ```
 
 
@@ -80,9 +98,9 @@ Custom domain: victorkevz.com
 
 
 ## Credits
-	•	Icons: [Icons8](https://icons8.com/)
-	•	Animations: [Framer Motion](https://motion.dev/)
-	•	Hosting: [Vercel](https://vercel.com)
+    •	Icons: [Icons8](https://icons8.com/)
+    •	Animations: [Framer Motion](https://motion.dev/)
+    •	Hosting: [Vercel](https://vercel.com)
 
 
 ## 📄 License
@@ -92,6 +110,4 @@ This project is open source and free to use under the MIT License.
 
 ## 👋 Connect
 
-Want to work with me? Reach out via the contact form on the site or email me directly at: contact@victorkevz.com
-
-
+Want to work with me? Reach out via the contact form on the site or email
