@@ -53,7 +53,7 @@ const MainBackground = () => {
     mobile: `/main-bg/mobile-${theme}-bg.webp`,
   };
   return (
-    <picture className="w-full h-full absolute pointer-events-none -z-10">
+    <picture className="w-full h-full fixed top-0 pointer-events-none -z-10">
       <source media="(min-width:800px )" srcSet={bgImage.desktop} />
       <source media="(max-width:799px )" srcSet={bgImage.mobile} />
       <img src={bgImage.mobile} className="w-full h-full object-cover" />
