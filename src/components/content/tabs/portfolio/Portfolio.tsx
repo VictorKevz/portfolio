@@ -20,19 +20,19 @@ export const Portfolio = () => {
       </p>
       <ul className="w-full flex items-start gap-2 md:gap-4 border-b border-[var(--border)]">
         {portfolioTabs.map((item) => {
-          const isActive = activeTab === item;
+          const isActive = activeTab === item.id;
           return (
             <button
-              key={item}
+              key={item.id}
               type="button"
-              onClick={() => setActiveTab(item)}
+              onClick={() => setActiveTab(item.id)}
               className={`font-bold h-8 sm:h-11 sm:max-w-[12rem] w-full px-2 sm:px-4 rounded-t-xl hover:bg-gradient-to-r hover:from-[var(--primary-gradient-left)] to-[var(--primary-gradient-right)] hover:text-[var(--neutral-0)] ${
                 isActive
                   ? "text-[var(--neutral-0)] primary-gradient-bg"
                   : "text-[var(--neutral-900)] bg-[var(--neutral-200)] border border-[var(--border)]"
               }`}
             >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {item.label}
             </button>
           );
         })}

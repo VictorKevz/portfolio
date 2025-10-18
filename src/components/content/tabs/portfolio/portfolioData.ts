@@ -1,9 +1,18 @@
-import { PortfolioCategory, PortfolioItem } from "../../../../types/portfolio";
+import { PortfolioItem, PortfolioNavItem } from "../../../../types/portfolio";
 
-export const portfolioTabs: PortfolioCategory[] = [
-  "all",
-  "clients",
-  "personal",
+export const portfolioTabs: PortfolioNavItem[] = [
+  {
+    id: "all",
+    label: "All",
+  },
+  {
+    id: "website",
+    label: "Websites",
+  },
+  {
+    id: "webApp",
+    label: "Web Apps",
+  },
 ];
 
 export const portfolioData: PortfolioItem[] = [
@@ -13,7 +22,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "Parking Pools",
     description:
       "Frontend feature development and UI enhancements in a 3-member team, improving usability, responsiveness, and code quality for a parking app during a client-engaged school project. ",
-    category: "clients",
+    category: "webApp",
     liveUrl: "https://www.siili.com/",
     githubUrl: "",
     tools: [
@@ -29,7 +38,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "VCTR AI Assistant",
     description:
       "An intelligent web chat showcasing Victor’s portfolio, enabling real-time AI interaction via text or voice, fast, simple, and accessible.",
-    category: "personal",
+    category: "webApp",
     liveUrl: "https://chatbot.victorkevz.com/",
     githubUrl: "https://github.com/VictorKevz/chat-bot",
     tools: [
@@ -45,7 +54,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "IP Adress Tracker",
     description:
       "Redesigned an interactive IP tracker featuring live search, animated UI, error modals, dark/light themes, and localStorage-based history-optimized for accessibility, responsiveness, and user experience.",
-    category: "personal",
+    category: "webApp",
     liveUrl: "https://victorkevz.github.io/ip-address-tracker/",
     githubUrl: "https://github.com/VictorKevz/ip-address-tracker",
     tools: [
@@ -61,7 +70,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "Pearldent Landing Page",
     description:
       "A modern, responsive landing page for PearlDent dental clinic. Features smooth animations, dark/light theme support, and a comprehensive appointment booking system.",
-    category: "clients",
+    category: "website",
     liveUrl: "https://dental-clinic-starter.vercel.app/",
     githubUrl: "https://github.com/VictorKevz/dental-clinic-starter",
     tools: [
@@ -77,7 +86,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "BookManager App",
     description:
       "A full-stack book inventory dashboard enabling authenticated users to manage personal libraries with CRUD functionality, theme and language preferences, responsive design, and secure data storage via Supabase.",
-    category: "personal",
+    category: "webApp",
     liveUrl: "https://book-manager-sigma-seven.vercel.app/",
     githubUrl: "https://github.com/VictorKevz/book-manager",
     tools: [
@@ -93,7 +102,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "Notes App",
     description:
       "Responsive, accessible note-taking app enabling CRUD, archiving, tag filtering, search, and theme customization. Built with React, animated with Framer Motion, supporting keyboard navigation and seamless user experience.",
-    category: "personal",
+    category: "webApp",
     liveUrl: "https://victorkevz.github.io/Notes_App/",
     githubUrl: "https://github.com/VictorKevz/Notes_App",
     tools: [

@@ -1,4 +1,4 @@
-export type PortfolioCategory = "all" | "clients" | "personal";
+export type PortfolioCategory = "all" | "website" | "webApp";
 type tools = string;
 export type PortfolioItem = {
   id: number;
@@ -13,4 +13,8 @@ export type PortfolioItem = {
 
 export type PortfolioItemProps = {
   data: PortfolioItem;
+};
+export type PortfolioNavItem = {
+  id: PortfolioCategory;
+  label: string;
 };
