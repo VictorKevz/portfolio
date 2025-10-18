@@ -45,17 +45,24 @@ export const data: CareerData = {
     },
     {
       id: 1,
-      title: "Co-Founder & Technical Lead - Zimbabwe",
-      year: "2020 – 2022",
+      title: "Digital Marketing & Content Creator - Remote",
+      year: "2022 – 2023",
       description:
-        "Built and maintained e-commerce platform using Ecwid for a startup. Led tech operations, managed logistics, and provided post-sale support for smart security devices in Zimbabwe.",
+        "My experience as a freelance digital marketer taught me how design, content, and user behavior intersect, an understanding I now apply in front-end development to build products that both look good and perform effectively.",
     },
     {
       id: 2,
-      title: "Web Development Intern - China",
-      year: "2021",
+      title: "Student Intern - Shanghai, China",
+      year: "2021 - 2022",
       description:
-        "Assisted in developing a Shanghai Dianji's university library portal using HTML, CSS, and JS. Gained hands-on experience building UIs and contributing to production code.",
+        "I contributed to a key internal project by developing a web application designed to support university staff and students. Gained hands-on experience building UIs and contributing to production code.",
+    },
+    {
+      id: 3,
+      title: "Co-Founder & Technical Lead - Zimbabwe",
+      year: "2020 – 2022",
+      description:
+        "Led digital marketing efforts, managed e-commerce store operations, and coordinated client projects to ensure smooth execution. Responsible for driving online sales through targeted campaigns, maintaining product inventory and listings, and supporting project management tasks.",
     },
   ],
   certifications: [
